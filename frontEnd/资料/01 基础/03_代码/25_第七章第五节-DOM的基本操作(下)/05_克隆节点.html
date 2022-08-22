@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <div>
+    <p>我是 div 内的 p 标签</p>
+  </div>
+
+  <script>
+    // 获取 div 元素
+    var div = document.querySelector('div')
+
+    // 克隆一个 div 元素, 不克隆后代元素
+    var clone1 = div.cloneNode(false)
+    // 克隆一个 div 元素, 克隆后代元素
+    var clone2 = div.cloneNode(true)
+
+    // 输出
+    console.log('不克隆后代节点 : ', clone1)
+    console.log('克隆后代节点 : ', clone2)
+  </script>
+</body>
+</html>

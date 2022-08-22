@@ -1,0 +1,43 @@
+<!--
+ * @作者: kerwin
+ * @公众号: 大前端私房菜
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            text-indent: 20px;
+            line-height: 100px;
+        }
+       span{
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border: 10px solid transparent;
+            border-top: 10px solid red;
+            position: relative;
+            top: 10px;
+        }
+
+        .box:hover span{
+            border-top: 0px;
+            border-bottom: 10px solid red;
+            top: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        导航
+        <span></span>
+    </div>
+    <span></span>
+</body>
+</html>

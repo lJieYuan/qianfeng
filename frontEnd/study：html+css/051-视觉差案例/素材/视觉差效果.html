@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			*{margin:0;padding:0}
+			div{
+				height:750px;
+				/* 取消平铺 */
+				/* background-repeat: no-repeat; */
+				/* 调整背景图片尺寸大小 */
+				background-size: cover;
+				background-position: center;
+				/* 背景的固定 */
+				background-attachment: fixed;
+			}
+			.bg1{
+				/* 插入图片 */
+				background-image: url(img/bg1.png);	
+				/* 给父元素添加上内边距 */
+				padding-top:300px
+			}
+			.bg2{
+				background-image: url(img/bg2.png);
+			}
+			.bg3{
+				background-image: url(img/bg3.png);
+			}
+			p{
+				height:150px;
+				background-color: rgba(255,255,255,.5);
+				font-size:50px;
+				/* 文本水平对其 */
+				text-align: center;
+				line-height: 150px;
+			}
+			.p1{
+				/* 给子元素添加上外间距的时候会作用到父元素父元素上面=====有很多种方法解决 */
+				/* margin-top:300px; */
+			}
+		</style>
+	</head>
+	<body>
+		<div class="bg1">
+			<!-- <p class="p1">
+				我是一只可爱的小鹿
+			</p> -->
+		</div>
+		<div class="bg2">
+			<!-- <p>
+				我是一只可爱的独角兽
+			</p> -->
+		</div>
+		<div class="bg3">
+			<!-- <p>
+				我是一只可爱的可爱的斑马
+			</p> -->
+		</div>
+	</body>
+</html>

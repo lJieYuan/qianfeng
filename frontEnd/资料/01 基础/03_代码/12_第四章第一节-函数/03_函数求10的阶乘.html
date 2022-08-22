@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+    // 函数求 10 的阶乘
+
+    // 第一段
+    // 定义一个函数
+    // function fn() {
+
+    //   var total = 1
+    //   // 开始 : 10
+    //   var n = 10
+    //   // 结束 : 1
+    //   while (n >= 1) {
+    //     // 将每一个数字阶乘到 total 变量
+    //     total *= n
+    //     // 修改初始值
+    //     n--
+    //   }
+
+    //   console.log(total)
+
+    // }
+
+    // // 调用这个函数
+    // fn()
+
+
+    // 第二段
+    // 定义一个函数
+    function fn( n ) {
+
+      var total = 1
+      // 结束 : 1
+      while (n >= 1) {
+        // 将每一个数字阶乘到 total 变量
+        total *= n
+        // 修改初始值
+        n--
+      }
+
+      console.log(total)
+
+    }
+
+    // 调用这个函数, 求 12 的阶乘
+    fn( 12 )
+    // 调用这个函数, 求 10 的阶乘
+    fn( 10 )
+  </script>
+</body>
+</html>

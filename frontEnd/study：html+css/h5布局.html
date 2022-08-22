@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      text-align: center;
+    }
+    html,body{
+      width: 100%;
+      height: 100%;
+    }
+    .header,.footer{
+      width: 100%;
+      height: 50px;
+      background-color: blueviolet;
+    }
+    section{
+      width: 100%;
+      height: calc(100% - 100px);
+    }
+    main{
+      width: calc(100% - 200px);
+      background-color: brown;
+    }
+    nav,main,aside{
+      float: left;
+      height: 100%;
+    }
+    nav,aside{
+      width: 100px;
+      background-color: aquamarine;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- 
+    h5 新增加标签，非常结构化，更利于开发人员查看，以及爬虫检索
+    header 头部
+    section 
+   -->
+  <header class="header">我是头部header</header>
+  <section>
+    <nav>
+      我是导航栏
+    </nav>
+    <main>
+      <article class="article1">
+        <header>我是article-header</header>
+        <section>
+          我是内容独立
+        </section>
+        <footer>我是article-footer</footer>
+      </article>
+      <article class="article2">
+        <header>我是article-header</header>
+        <section>
+          我是内容独立
+        </section>
+        <footer>我是article-footer</footer>
+      </article>
+    </main>
+    <aside>我是侧边栏--小广告呀</aside>
+  </section>
+  <footer class="footer">我是脚部</footer>
+</body>
+</html>

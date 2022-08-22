@@ -1,0 +1,62 @@
+<!--
+ * @作者: kerwin
+ * @公众号: 大前端私房菜
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        html,body{
+            height: 100%;
+        }
+
+        div{
+            height: 100%;
+            width: 200px;
+            background:red;
+            position: fixed;
+            left:0px;
+            top:0px;
+
+            /* transform: translateX(-200px); */
+
+            transform: translateX(-100%);
+
+            /* 100% 是相对于自身的100% */
+
+            /* animation: run 1s linear forwards; */
+
+            animation: run 1s linear forwards reverse;
+
+            /* animation-fill-mode: forwards; */
+
+            /* none 默认值
+            
+               forwards 最后的画面
+               backwards 初始画面
+             */
+        }
+
+
+        @keyframes run {
+            from{
+                transform: translateX(-100%);
+            }
+
+            to{
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

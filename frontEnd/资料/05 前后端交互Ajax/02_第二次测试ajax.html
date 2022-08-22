@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+    /*
+      第二次测试 ajax
+    */
+
+    // 1. 创建ajax 对象
+    var xhr = new XMLHttpRequest()
+
+    // 2. 配置本次的请求信息
+    xhr.open('GET', 'http://localhost:8888/test/second', true)
+
+    // 3. 配置请求完成的事件
+    xhr.onload = function () {
+      // 当后端返回的是 json 格式字符串的时候, 我们需要进行单独的解析
+      // 语法: JSON.parse(json格式字符串)
+      // 返回值: 解析好的 js 格式的数据
+      var res = JSON.parse(xhr.responseText)
+      console.log(res)
+    }
+
+    // 4. 发送出去
+    xhr.send()
+  </script>
+</body>
+</html>

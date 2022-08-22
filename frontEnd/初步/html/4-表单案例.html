@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- form:表单主要用来收集用户信息 
+    form一共有俩个属性：
+    action：需要发起请求提交的地址；
+    method: 提交时的请求类型 get/post；
+    
+    
+    
+    input 有好多属性：发送请求时，需要提交的属性一定要在input书写name ，否则不会携带。
+    text:普通文本输入框
+    password:输入密码文本框
+    submit:提交按钮
+    rest:重置按钮
+    button:普通按钮
+
+
+    button:也可以通过type属性进行表单提交 值可选 submit , reset
+  -->
+  
+  <form action="https:www.jd.com" method="POST">
+    账号：<input type="text" value="" placeholder="账号" name="userName">
+    <br>
+    密码：<input type="password" value="" placeholder="" name="passWord">
+    <br>
+    <input type="submit" value="提交">
+    <input type="reset" value="重置">
+    <input type="button" value="我是一个用input 声明的普通按钮">
+    <button>我是直接用button属性声明的普通按钮</button>
+    <button type="reset">我是直接用button属性声明的具有重置功能的按钮</button>
+  </form>
+</body>
+</html>

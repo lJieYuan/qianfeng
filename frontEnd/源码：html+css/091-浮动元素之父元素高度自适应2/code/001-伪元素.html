@@ -1,0 +1,35 @@
+<!--
+ * @作者: kerwin
+ * @公众号: 大前端私房菜
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 伪元素 */
+        div::first-letter{
+            font-size: 30px;
+            color:red;
+        }
+
+        div::first-line{
+            /* font-size: 30px; */
+            background:yellow;
+        }
+
+        div::before{
+            content:"aaaaa"
+        }
+        div::after{
+            content:"bbbb"
+        }
+    </style>
+</head>
+<body>
+    <div>lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, fugiat assumenda, quisquam exercitationem blanditiis illum minus id ipsum quasi et debitis! Delectus, voluptatem eveniet! Accusamus quasi culpa ipsum quo et.</div>
+</body>
+</html>

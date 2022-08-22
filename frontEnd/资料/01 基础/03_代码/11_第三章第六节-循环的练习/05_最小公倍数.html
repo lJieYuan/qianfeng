@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+    // 案例 - 最小公倍数
+
+    // 第一段
+    // 准备两个变量, 保存两个数字
+    // var max = 15
+    // var min = 10
+
+    // // 从相对小的数字向 1 进行循环
+    // for (var i = max; i <= min * max; i += max) {
+    //   // 输出看一下 i
+    //   console.log( i )
+    // }
+
+    // 第二段
+    // var max = 15
+    // var min = 10
+
+    // // 从相对小的数字向 1 进行循环
+    // for (var i = max; i <= min * max; i += max) {
+    //   // 只要能整除 相对小的数字 就可以
+    //   if (i % min === 0) {
+    //     console.log( i )
+    //   }
+    // }
+
+
+    // 第三段
+    var max = 15
+    var min = 10
+
+    // 从相对小的数字向 1 进行循环
+    for (var i = max; i <= min * max; i += max) {
+      // 只要能整除 相对小的数字 就可以
+      if (i % min === 0) {
+        console.log( i )
+        // 可以直接结束循环了
+        break
+      }
+    }
+  </script>
+</body>
+</html>

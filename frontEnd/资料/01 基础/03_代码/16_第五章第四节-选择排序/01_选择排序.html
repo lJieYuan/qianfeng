@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+    // 选择排序 select sort
+
+    // 第一段
+    // // 准备乱序的数组
+    // var arr = [ 9, 3, 6, 2, 4, 1, 8, 5, 7 ]
+    // // 输出一次
+    // console.log( arr )
+
+    // // 假设最小的数字索引是 0
+    // var minIndex = 0
+
+    // // 循环遍历数组, 从索引 1 位置开始
+    // for (var i = 1; i < arr.length; i++) {
+    //   // 判断是不是比我假设索引位置的数字小
+    //   if (arr[i] < arr[minIndex]) {
+    //     // 如果条件为 true, 那么替换 minIndex
+    //     minIndex = i
+    //   }
+    // }
+
+    // // 输出 minIndex
+    // console.log( minIndex )
+
+    // 第二段
+    // // 准备乱序的数组
+    // var arr = [ 9, 3, 6, 2, 4, 1, 8, 5, 7 ]
+    // // 输出一次
+    // console.log( arr )
+
+    // // 假设最小的数字索引是 0
+    // var minIndex = 0
+
+    // // 循环遍历数组, 从索引 1 位置开始
+    // for (var i = 1; i < arr.length; i++) {
+    //   // 判断是不是比我假设索引位置的数字小
+    //   if (arr[i] < arr[minIndex]) {
+    //     // 如果条件为 true, 那么替换 minIndex
+    //     minIndex = i
+    //   }
+    // }
+
+    // // 交换索引 0 位置和 minIndex 位置
+    // var temp = arr[0]
+    // arr[0] = arr[minIndex]
+    // arr[minIndex] = temp
+
+    // // 输出一次
+    // console.log( arr )
+
+
+    // 第三段
+    // 准备乱序的数组
+    var arr = [ 9, 3, 6, 2, 4, 1, 8, 5, 7 ]
+    // 输出一次
+    console.log( arr )
+
+    // 进行数组长度 - 1 轮的比较
+    for (var j = 0; j < arr.length - 1; j++) {
+      // 假设最小的数字索引是 0
+      var minIndex = j
+
+      // 循环遍历数组, 从索引 1 位置开始
+      for (var i = j + 1; i < arr.length; i++) {
+        // 判断是不是比我假设索引位置的数字小
+        if (arr[i] < arr[minIndex]) {
+          // 如果条件为 true, 那么替换 minIndex
+          minIndex = i
+        }
+      }
+
+      // 交换索引 0 位置和 minIndex 位置
+      var temp = arr[j]
+      arr[j] = arr[minIndex]
+      arr[minIndex] = temp
+    }
+
+    // 输出一次
+    console.log( arr )
+  </script>
+</body>
+</html>

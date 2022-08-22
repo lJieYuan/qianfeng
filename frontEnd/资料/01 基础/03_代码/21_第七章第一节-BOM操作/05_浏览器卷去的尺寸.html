@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body {
+      width: 3000px;
+      height: 3000px;
+    }
+  </style>
+</head>
+<body>
+
+  <script>
+    // 滚动条位置变化
+    // window.onscroll = function () {
+    //   // 有 DOCTYPE 标签
+    //   // console.log( document.documentElement.scrollTop )
+    //   // // 没有有 DOCTYPE 标签
+    //   // console.log( document.body.scrollTop )
+
+    //   // 兼容
+    //   var height = document.documentElement.scrollTop || document.body.scrollTop
+    //   console.log( height )
+    // }
+
+    window.onscroll = function () {
+      // 有 DOCTYPE 标签
+      // console.log( document.documentElement.scrollLeft )
+      // // 没有有 DOCTYPE 标签
+      // console.log( document.body.scrollLeft )
+
+      // 兼容
+      var height = document.documentElement.scrollLeft || document.body.scrollLeft
+      console.log( height )
+    }
+  </script>
+</body>
+</html>

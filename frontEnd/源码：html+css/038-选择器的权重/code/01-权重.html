@@ -1,0 +1,47 @@
+<!--
+ * @作者: kerwin
+ * @公众号: 大前端私房菜
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #iddiv{
+            background-color: blue;
+        }
+        
+        .cdiv{
+            background-color: red;
+        }
+        div{
+            background-color: yellow!important;
+        }
+
+        /* id选择器权重>class>元素 */
+
+        div .pclass{
+            background-color: wheat;
+        }
+        div p{
+            background-color: green;
+        }
+
+        p{
+            background-color: orange;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="cdiv" id="iddiv" style="background-color: brown;">1111111111111111111111
+        <p class="pclass">22222222222222222222</p>
+    </div>
+
+    <p>3333333333333333333333333</p>
+</body>
+</html>

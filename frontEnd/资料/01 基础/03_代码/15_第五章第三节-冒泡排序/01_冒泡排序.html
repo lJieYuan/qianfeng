@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+    // 冒泡排序 bubble sort
+
+    // 第一段
+    // // 准备一个乱序的数组
+    // var arr = [ 9, 3, 6, 2, 4, 1, 8, 5, 7 ]
+    // // 输出一下
+    // console.log( arr )
+
+    // // 交换两个变量
+    // var temp = arr[0]
+    // arr[0] = arr[1]
+    // arr[1] = temp
+    // // 再次输出
+    // console.log( arr )
+
+    // 第二段
+    // // 准备一个乱序的数组
+    // var arr = [ 9, 3, 6, 2, 4, 1, 8, 5, 7 ]
+    // // 输出一下
+    // console.log( arr )
+
+    // // 循环遍历数组
+    // for (var i = 0; i < arr.length - 1; i++) {
+    //   // 依次比较当前和下一个数字
+    //   if (arr[i] > arr[i + 1]) {
+    //     // 条件为 true 的时候交换变量
+    //     var temp = arr[i]
+    //     arr[i] = arr[i + 1]
+    //     arr[i + 1] = temp
+    //   }
+    // }
+    // // 输出数组
+    // console.log( arr )
+
+
+    // 第三段
+    // // 准备一个乱序的数组
+    // var arr = [ 9, 3, 6, 2, 4, 1, 8, 5, 7 ]
+    // // 输出一下
+    // console.log( arr )
+
+
+    // // 进行长度少 1 轮的比较
+    // for (var j = 0; j < arr.length - 1; j++) {
+
+    //   // 循环遍历数组
+    //   for (var i = 0; i < arr.length - 1; i++) {
+    //     // 依次比较当前和下一个数字
+    //     if (arr[i] > arr[i + 1]) {
+    //       // 条件为 true 的时候交换变量
+    //       var temp = arr[i]
+    //       arr[i] = arr[i + 1]
+    //       arr[i + 1] = temp
+    //     }
+    //   }
+
+    // }
+    // // 输出数组
+    // console.log( arr )
+
+
+    // 第四段
+    // 准备一个乱序的数组
+    var arr = [ 9, 3, 6, 2, 4, 1, 8, 5, 7 ]
+    // 输出一下
+    console.log( arr )
+
+
+    // 进行长度少 1 轮的比较
+    for (var j = 0; j < arr.length - 1; j++) {
+
+      // 循环遍历数组
+      for (var i = 0; i < arr.length - 1 - j; i++) {
+        // 依次比较当前和下一个数字
+        if (arr[i] > arr[i + 1]) {
+          // 条件为 true 的时候交换变量
+          var temp = arr[i]
+          arr[i] = arr[i + 1]
+          arr[i + 1] = temp
+        }
+      }
+
+    }
+    // 输出数组
+    console.log( arr )
+
+  </script>
+</body>
+</html>

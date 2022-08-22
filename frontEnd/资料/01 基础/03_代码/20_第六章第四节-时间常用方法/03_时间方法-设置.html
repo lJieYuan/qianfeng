@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+    // 时间对象
+
+    // 创建一个时间对象
+    var time = new Date()
+
+    // 输出一次
+    console.log( time )
+
+    // 设置年份信息
+    time.setFullYear( 2002 )
+    // 设置月份信息
+    time.setMonth( 1 )
+    // 设置日期信息
+    time.setDate( 23 )
+    // 设置小时信息
+    time.setHours( 11 )
+    // 设置分钟信息
+    time.setMinutes( 22 )
+    // 设置秒钟信息
+    time.setSeconds( 18 )
+
+    // 再次输出时间对象
+    console.log( time.getTime() )
+  </script>
+</body>
+</html>

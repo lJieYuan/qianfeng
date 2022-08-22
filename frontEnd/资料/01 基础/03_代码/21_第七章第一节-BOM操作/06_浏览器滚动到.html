@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body { width: 3000px; height: 3000px; }
+
+    button { position: fixed; bottom: 50px; right: 50px; }
+  </style>
+</head>
+<body>
+
+  <button id="go"> 走你 </button>
+
+  <script>
+    // // 按钮添加点击行为
+    // go.onclick = function () {
+    //   // 浏览器滚动到指定位置
+    //   window.scrollTo( 300, 400 )
+    // }
+
+
+    // 按钮添加点击行为
+    go.onclick = function () {
+      // 浏览器滚动到指定位置
+      window.scrollTo({
+        left: 300,
+        top: 400,
+        behavior: 'smooth'
+      })
+    }
+  </script>
+</body>
+</html>

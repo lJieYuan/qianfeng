@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* css3 新增层级选择器、属性选择器  核心就是多种的选择性，使查找元素的方式更加方便和通用。
+    我理解日常需求我们会用ui 框架，已经帮我们做了很多事情，业务需求会用到但是会比较少，但是有一天我们去写更通用的框架时，我理解这些需要经常用到，避免很多的class ,选择更加通用。
+    1、~ 选择当前元素后的，标签同级元素
+    2、+ 选择当前元素的，下一个同级元素
+    */
+    /* 层级选择器 */
+    li{
+      border: 1px solid red;
+    }
+    /* 选择当前元素后的，标签同级元素 */
+    .check1~li{
+      background-color: aquamarine;
+    }
+    /* 选择当前元素的，下一个同级元素 */
+    .check1+li{
+      background-color: blueviolet;
+    }
+
+    /* 属性选择器 
+    [class] 表示选择文档中所有有类名的元素
+    div[class] 表示限定范围，选中当前标签中有class类名的元素
+    div[class='bar'] 表示div class='bar' 的元素被选中，注意：当同一个元素有多个时，无法被选中，他是全 === 。
+    div[class~='bar'] 表示div 所有以bar为class 命名的，选中
+    [class^='c'] 表示开头带c的元素被选中
+    [class$='r'] 表示结尾带r的元素被选中
+    [class*='ar'] 模糊嗖嗖，表示查找 class名中为 ar的元素
+
+    ~=全部匹配， ^=开头匹配，&= 结束匹配 ， *= 检测字符匹配
+    */
+    
+    [class]{
+      width: 100%;
+      height: 30px;
+      line-height: 30px;
+      background-color: red;
+    }
+
+    div[class]{
+      width: 100%;
+      height: 30px;
+      line-height: 30px;
+      background-color: rosybrown;
+    }
+
+    div[class='bar']{
+      color: aqua;
+    }
+
+    div[class~='bar']{
+      color: blueviolet;
+    }
+
+    [class^='c']{
+      border-top: 10px solid blue;
+    }
+
+    [class$='r']{
+      border-bottom: 10px solid forestgreen;
+    }
+
+    [class*='ar']{
+      border-left: 10px solid wheat;
+    }
+
+    /* 结构伪类选择器 */
+    ul>li{
+      border-bottom: 1px solid red;
+    }
+    ul>li:first-child{
+      background-color: aliceblue;
+    }
+    ul>li:last-child{
+      background-color: aquamarine;
+    }
+
+    /* 伪类选择器 */
+    ul>li:nth-child(2){
+      color: khaki;
+    }
+    ul>li:nth-child(2n+1){
+      color: blue;
+    }
+
+    /* 独生子女选择器 */
+    .only p:only-child{
+      background-color: blueviolet;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 层级选择器 -->
+  <!-- 层级选择器
+  <ul>
+    <li class="check1">
+      11
+      <ol>
+        <li>11</li>
+        <li>22</li>
+        <li>33</li>
+        <li>44</li>
+        <li>55</li>
+        <li>66</li>
+      </ol>
+    </li>
+    <li>22</li>
+    <li>33</li>
+  </ul>
+  <br>
+  <br> -->
+  <!-- 属性选择器 -->
+  <!-- 属性选择器
+  <div class="car">car</div>
+  <div class="bar">bar</div>
+  <div class="aar bar">aar</div>
+  <div class="dar">dar</div>
+  <div class="ear">ear</div>
+  <div class="cel">cel</div>
+  <ul>
+    <li class="car bar">我是li-car</li>
+  </ul> -->
+
+  <!-- 结构伪类选择器 -->
+  结构伪类选择器
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+  </ul>
+
+  <div class="only">
+    <p>1</p>
+    <p>2</p>
+  </div>
+  <div class="only">
+    <p>1</p>
+  </div>
+
+  <div class="emtyp">
+    
+  </div>
+</body>
+</html>

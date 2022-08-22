@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!-- lang 网站语音特性设置有三个值 中文：zh-cn;英文：en;日文:jp-je -->
+<html lang="en"> 
+<head>
+  <!-- 字符集标签 UTF-8是一种特殊编码，告知浏览器界面以什么内容进行字符串编码，浏览器做好编译工作，常见的字符编码有 gb2312、gbk、unicode、utf-8。 -->
+  <meta charset="UTF-8">  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>今天心情很好，大前端冲啊！</h1>
+  <strong>我是一个被强调的文字内容 strong</strong>
+  从今天开始好好学习天天向上w
+  <hr color="red" width="999"/>
+  <hr color="green"/>
+
+  <i>字体倾斜i <b>我是加粗的字体</b></i>
+  <hr>
+  <br>
+  <!-- em特殊点标签倾斜，无加粗，强调文本 -->
+  <em>我是内容强调em</em>
+
+  <b><em>我是内容强调em+加粗</em></b>
+  有一段文字是删除的，del语义化更好，<del>del删除线</del>
+  <br>
+  <s>s删除线</s>
+  <hr>
+  <hr>
+  这段文字是下标<sub>[1]</sub>
+  <hr>
+  这段文字是上标<sup>[2]</sup>
+  <br>
+  <u>还有段文字可以下划线</u>
+  <hr>
+  <hr>
+  我可以将hr的阴影取消，主要用noshade属性
+  <hr noshade>
+
+
+  <hr>
+  <hr>
+  <hr>
+  <hr noshade="noshade">
+
+  现在开始说一下特殊字符的作用性，因为一般html里 &lt;括号是会被解析为html标签所以我们需要用到特殊字符，&gt; 
+  <br>
+  lt &lt;是左肩括号， &gt; gt 是右肩括号；
+
+  空格是 &nbsp; 不推荐使用，空格不是一个汉字的距离。
+  <br>
+  &emsp;是一个汉字的距离；<br>
+  可以验证一下
+  <hr>
+  版权可以直接这么打&copy;
+  <hr>
+  商标可以这么打：
+  &trade;TM 代表还未注册；已经向国家商标局提出申请，目前正在审核中。<br>
+  &reg; 注册，代表已经在商标局注册，受保护的商标
+  <hr>
+  奇奇怪怪的表情；
+  &#21314;
+</body>
+</html>

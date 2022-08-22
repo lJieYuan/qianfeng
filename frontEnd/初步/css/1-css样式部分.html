@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 样式一共分为三种，行内样式、内联样式、嵌入式样式，
+    内部样式是写在当前html文件内。
+    外部样式是写在外部样式中，通过link标签或者import引入。
+    行内样式是写在当前html文件中标签属性style里。
+
+    link引入和import引入的区别：
+    区别1 本质问题， link 是xhtml就有的标签，而import是css提出的一种方式。
+    区别2 link标签是dom节点未加载完成就已经开始，加载，而import则是dom元素加载完成之后才进行加载。
+    区别3 import是css2.1被提出的，兼容性不是很好，import不支持ie5以下。
+  -->
+  <link rel="stylesheet" href="./css样式部分.css">
+  <!-- 内部样式表：首先先要选择修改的地方，叫选择器，后进行要修改的属性，和属性值，可以理解为，脸为当前选择，要修改脸的嘴 -->
+  <style>
+    @import url('./css样式部分2.css');
+    /* 脸{
+      嘴：在小一点
+    } */
+    #div1{
+      /* color: blue; */
+    }
+    .div3{
+      color: aqua;
+    }
+    .div2{
+      color: green;
+    }
+
+    a:link{
+      color: green;
+    }
+
+    a:visited{
+      color: aqua;
+    }
+
+    a:hover{
+      color: yellow;
+    }
+    a:active{
+      color: blue;
+    }
+
+    p{
+      text-decoration: line-through;
+    }
+    
+  </style>
+
+
+</head>
+<body>
+  <h1>你看我的文字会变颜色的哦</h1>
+    <!-- 
+    1、css 优先级  会以样式表为规则，就近原则覆盖。 同等 类级别选择器，设置同一个属性，会看哪个选择器的样式靠后，会将上一个样式覆盖， id选择器大于一切选择器
+    css选择器解析规则1:不同权重的选择符，样式有冲突时，高权重的选择符会覆盖低权重的选择符样式；
+    css选择器解析规则性2:相同权重的选择符，样式冲突时，采用style样式表，样式遵循就近原则，哪个选择符最后定义，就用哪个选择符样式。
+
+    选择器类型有以下几种：
+      id 选择器 #box  只能设置一个
+      class 选择器 .box 可以选择一组标签
+      通配符选择器 * {} 代表选择html所有元素
+      群组选择器， h1,h2,h3 用逗号分隔，可以选择多组元素，设置同一个样式
+      后代选择器 ， h1>.box 
+      
+      选择器是怎么匹配的，后代选择器从右往左查找，先匹配孩子，在匹配父亲，一步步匹配。
+    -->
+  <div id="div1" class="div2 div3">
+    2222
+  </div>
+  <!-- 
+    a 链接的四种伪类元素
+    a:link 初始化
+    a:visited 超链接被成功访问后的状态
+    a:hover 移入a标签的状态
+    a:active 鼠标摁下那一刻的状态
+   -->
+  <a href="https://www.baidu.com/2" target="_blank" rel="noopener noreferrer">跳转</a>
+
+  <!-- 
+    css 
+    font-size 字体大小设计， 浏览器默认是16px ,最低可设置到12px
+    font-family 设置字体类型， 可以设置多个，用逗号分隔， 表示浏览器不支持第一个，则用第二个字体，都不支持用默认，举个例子: font-family: 微软雅黑，宋体；
+   -->
+
+   <!-- 
+     font-weight 加粗
+    -->
+    <!-- 
+      缩进：
+      letter-spacing:10px 文本间距： 词间距，字符间距
+      word-spacing:10px 单词间距
+      text-indent: 10px 2em   首行缩进  em 相对单位，相对于目前大小的几倍。
+      &emsp; 充当一个字体 。
+      
+      文本属性：
+      text-decoration:none 没有/underline 下划线 / overline 上划线 /line-through 删除线
+
+      检查英语文章大小写
+      text-transform:capitalize 首字母大写 / lowercase 小写 / uppercase 大写 
+      
+      font 文本属性合并修改
+      font: italic bold 20px/1em 微软雅黑
+            斜体    加粗 字体大小 行高  字体类型
+
+      列表属性：
+      list-style-type: square; disc 实心园 / circle 空心园 /square 实心正方形 none 
+      list-style-image: url(img/1.jpg)
+      list-style-position :inside 
+      list-style: 复合属性 
+      
+
+      -->
+    <p>my name is jie</p>
+</body>
+</html>

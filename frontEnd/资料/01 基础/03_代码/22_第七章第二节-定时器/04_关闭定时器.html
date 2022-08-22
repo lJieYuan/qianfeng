@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <button id="off">关闭定时器</button>
+
+  <script>
+    // 定时器返回值
+
+    // 开启定时器
+    // 书写第一个定时器
+    var timer1 = setInterval(function () {
+      console.log('间隔定时器')
+    }, 1000)
+
+    // 书写第二个定时器
+    var timer2 = setTimeout(function () {
+      console.log('延时定时器')
+    }, 3000)
+
+    // // 给按钮绑定点击事件
+    off.onclick = function () {
+      // 关闭定时器
+      clearInterval(timer1)
+      clearInterval(timer2)
+    }
+  </script>
+</body>
+</html>

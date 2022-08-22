@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+    // 数组常用方法 - forEach
+
+    // 第一段
+    // 准备一个原始数组
+    var arr = [ 100, 200, 300, 400 ]
+
+    // 输出一次
+    console.log( arr )
+
+    // 执行 forEach 方法
+    var res = arr.forEach( function (item, index, arr) {
+      // item 就是数组的每一项
+      console.log(item)
+      // index 就是索引
+      console.log(index)
+      // arr 就是原始数组
+      console.log(arr)
+      // 输出一个分隔线
+      console.log(' ----------------- ')
+
+    } )
+
+  </script>
+</body>
+</html>

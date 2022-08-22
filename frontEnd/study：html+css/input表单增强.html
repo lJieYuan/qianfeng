@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 
+    h5 增强表单新特性、  增强input 功能，使需求迭代变得更加容易、 特性有 color 颜色选择器、email 电子邮件、url 链接、tel手机号输入列表、range滑块选择、number数字选择器、search搜索、
+    date日期、month 月份选择器、week周选择器、datetime-local 时间选择器 ，表单内容非常丰富， 还有 html4 text文本框、radio 单选框、submit 提交、reset 重置、 image 图片按钮、
+    checkbox 多选框 、 file 上传文件、 password 密码框
+   -->
+  <form action="" method="get">
+    <!-- 颜色选择器 -->
+    颜色选择器：
+    <input type="color" name="color" id="">
+    <br>
+    电子邮件：
+    <input type="email" name="email" id="">
+    <br>
+    url:
+    <input type="url" name="url" id="">
+    <br>
+    <!-- 手机号 tel 适用于移动端的浏览器，可以弹出键盘 供用户使用 -->
+    手机号：
+    <input type="tel" name="tel" id="">
+    <br>
+    滑块：
+    <input type="range" name="range" id="" min="0" max="100" step="1" value="10">
+    <br>
+    数字类型：
+    <input type="number" name="number" id="">
+    <br>
+    搜索
+    <input type="search" name="search" id="">
+    <div>
+      日期选择：<input type="date" name="date" id="">
+      <br>
+      月份选择：<input type="month" name="month" id="">
+      <br>
+      周选择：<input type="week" name="week" id="">
+      <br>
+      时间选择1：<input type="datetime" name="datetime" id="">
+      <br>
+      时间选择2：<input type="datetime-local" name="datetime-local" id="">
+    </div>
+    提交按钮：
+    <input type="submit">
+  </form>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <!-- 表单属性
+  autofocus 自动获取焦点，只能有一个，多个时html从上执行时第一个最优先
+  required 必填项 可以有多个呀
+  multiple 可以有多个电子邮件
+  -->
+  <form action="">
+    姓名：
+    <input type="text" name="text1" id="" required autofocus pattern="[0-9]{2}[A-z]{10}">
+    <br>
+    爱好：
+    <input type="email" name="text2" id="" required multiple>
+    <br>
+    url:
+    <input type="url" name="text3" id="" required>
+    <br>
+    <input type="submit" value="提交">
+  </form>
+</body>
+</html>

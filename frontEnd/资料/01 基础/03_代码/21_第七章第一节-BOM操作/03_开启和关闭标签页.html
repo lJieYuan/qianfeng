@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <button id="on"> 开启 </button>
+  <button id="off"> 关闭 </button>
+
+  <script>
+
+    // 开启按钮的点击事件
+    on.onclick = function () {
+      // 开启标签页
+      window.open( 'http://www.mobiletrain.org/' )
+    }
+
+    // 关闭按钮的点击事件
+    off.onclick = function () {
+      // 关闭标签页
+      window.close()
+    }
+
+  </script>
+</body>
+</html>

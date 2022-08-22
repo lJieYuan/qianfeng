@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+    // 函数的返回值
+
+    // 定义一个函数
+    function fn( n ) {
+
+      var total = 1
+      // 结束 : 1
+      while (n >= 1) {
+        // 将每一个数字阶乘到 total 变量
+        total *= n
+        // 修改初始值
+        n--
+      }
+
+      // 把计算结果作为函数的返回值
+      return total
+
+    }
+
+    // 调用这个函数, 求 12 的阶乘, 把计算结果赋值给 r1
+    var r1 = fn( 12 )
+    // 调用这个函数, 求 10 的阶乘, 把计算结果赋值给 r2
+    var r2 = fn( 10 )
+
+    console.log(r1, r2)
+  </script>
+</body>
+</html>

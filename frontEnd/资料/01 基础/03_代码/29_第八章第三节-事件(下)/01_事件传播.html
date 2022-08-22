@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .outer {
+      width: 500px;
+      height: 500px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: pink;
+
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    }
+
+    .center {
+      width: 300px;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: skyblue;
+    }
+
+    .inner {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="outer">
+    <div class="center">
+      <div class="inner"></div>
+    </div>
+  </div>
+
+  <script>
+    // 绑定事件
+    // 1. 获取到需要用到的元素
+    var outer = document.querySelector('.outer')
+    var center = document.querySelector('.center')
+    var inner = document.querySelector('.inner')
+
+    // 2. 给三个元素都绑定点击事件
+    outer.onclick = function () { console.log('我是 outer 元素, 我被点击了') }
+    center.onclick = function () { console.log('我是 center 元素, 我被点击了') }
+    inner.onclick = function () { console.log('我是 inner 元素, 我被点击了') }
+  </script>
+</body>
+</html>

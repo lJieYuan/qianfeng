@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!-- lang 网站语音特性设置有三个值 中文：zh-cn;英文：en;日文:jp-je -->
+<html lang="en"> 
+<head>
+  <!-- 字符集标签 UTF-8是一种特殊编码，告知浏览器界面以什么内容进行字符串编码，浏览器做好编译工作，常见的字符编码有 gb2312、gbk、unicode、utf-8。 -->
+  <meta charset="UTF-8">  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- vscode 编辑器，有快速生成html代码，方法，跟编程式语言类似。 -->
+  <!-- ol 有序列表里只能放li li里可以组合任意标签。
+    type 属性可以约定列表是以什么进行升序， 值为：1、a、A、i、I ，  只有这五个，传入非这几个类型，自动解析为数字。 只要写了type 属性，不传值默认为以数字开始。
+    start 表示从哪开始必须是数字 。
+
+  -->
+  <ol type="" start="1">
+    <li>1dwd</li>
+    <li>1dwd</li>
+  </ol>
+  <!-- ul 无序列表 拥有四个值 ，disc 实心园 也是默认值， circle 空心园， square 实心正方形  ， none 取消显示-->
+  <ul type="square">
+    <li>22</li>
+    <li>22</li>
+    <li>22</li>
+    <li>22</li>
+    <li>22</li>
+    <li>22</li>
+  </ul>
+  <!-- dl dt dd 自定义列表 -->
+  <dl>
+    <dt>我是图片</dt>
+    <dd>我是文字</dd>
+  </dl>
+  <dl>
+    <dt>我是图片</dt>
+    <dd>我是文字</dd>
+  </dl>
+  <dl>
+    <dt>我是图片</dt>
+    <dd>我是文字</dd>
+  </dl>
+  <dl>
+    <dt>我是图片</dt>
+    <dd>我是文字</dd>
+  </dl>
+  <dl>
+    <dt>我是图片</dt>
+    <dd>我是文字</dd>
+  </dl>
+  <dl>
+    <dt>我是图片</dt>
+    <dd>我是文字</dd>
+  </dl>
+  <!-- 独立的块级元素，用来划分页面区域，独占一行。 -->
+  <div>d1d2dd</div>
+  <div>d1d2dd</div>
+  <!-- span标签，用于独立文本修饰。内容有多宽就占用多宽的空间距离 -->
+  <div>我爱学习，学习也爱我我们一起成长<span style="color:violet;">加油！宝贝！你可以的！你是最棒的！</span></div>
+
+  <!-- 图片 
+    有俩个属性：title 和 alt
+    title:鼠标移入图片显示的文字。
+    alt:图片加载失败显示的文字。 图片加载失败后，假设有设置title 属性，移入也会显示。
+  -->
+  <!-- 
+    相对路径和绝对路径：
+    相对路径：相对于自身路径开始查找； 项目中经常用。
+    绝对路径：绝对性的地址路径。
+   -->
+  <!-- <img src="./img/img.png" alt="" title="爱你"> -->
+  <img 
+    src="./img/img.png" 
+    alt="我是图片加载失败显示的文字呀" 
+    title="我是鼠标移入图片显示的文字"
+    width="100"
+    height="100"
+  >
+
+  <!-- a链接帮助我们可以跳转不同的窗口
+    一共有三个属性 href & target & title
+    href 跳转的路径
+    target 事件源，跳转的界面从当前窗口打开还是心开窗口  默认值self 从当前窗口打开， _black 新开窗口打开
+    title 鼠标移入后的提示文字。
+    默认颜色蓝色，点击链接跳转后，变为紫色。
+  -->
+  <a href="https://wwww.baidu.com" target="_black" title="点击我可以跳转到百度呀">点我跳转百度</a>
+  <hr>
+  <!-- 创建俩行俩列table  table>tr*2>td*2{td}-->
+  <!-- table 一共有六个属性  统一：直接叠加到dom元素的宽高属性，可以不加px
+    width 宽度
+    height 高度
+    border 边框大小
+    cellspacing 单元格与单元格之间的距离
+    cellpadding 单元格与内容之间的距离
+    align 水平浮动
+  -->
+  <!-- 
+    tr 也是有自己的属性的， tr是不可以设置宽度的
+    bgColor：可以设置单独一行的颜色
+    height: 可以设置高度
+    align: 可以设置文字是否水平对齐 left center right
+    valign: 可以设置文字是否垂直对齐 top middle bottom
+   -->
+   <!-- 
+    td 也是有自己的属性的，可以设置宽度和宽度
+    width: 如果单独对某个td 设置了宽度，当前td所在那一列所有的td 宽度都会和设置了宽度的td一样；
+    height: 如果单独对某个td 设置了高度，当前td所在那一行所有的td 高度都会和设置了高度的td一样；
+    bgColor: 可以设置单个td的背景颜色。
+    align: 可以设置单个td文字是否水平对齐 left center right
+    valign: 可以设置单个td文字是否垂直对齐 top middle bottom
+    td 还可以设置行合并和列合并，合并之后的会被挤出去，建议合并时需要删掉。
+    colspan：列合并
+    rowspan: 行合并
+    -->
+  <table align="center" width="900" height="900" border="20" cellspacing="10" cellpadding="20" bgColor="red" borderColor="green">
+    <tr height="200" bgColor="pink" align="center" valign="bottom">
+      <td width="300">滁州</td>
+      <td height="300" colspan="3" rowspan="2">中国</td>
+      <!-- <td height="300">日本</td> -->
+      <!-- <td height="300">美国</td> -->
+    </tr>
+    <tr>
+      <td>英国</td>
+      <!-- <td colspan="3">熬大利亚</td> -->
+      <!-- <td>印度</td> -->
+      <!-- <td>土耳其</td> -->
+    </tr>
+  </table>
+</body>
+</html>

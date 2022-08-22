@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    textarea{
+      width: 200px;
+      height: 200px;
+      resize: none;
+      /*  horizontal 水平  vertical 垂直的 both 水平+垂直  none 不能拉伸*/
+    }
+  </style>
+</head>
+<body>
+  <form action="">
+    <input type="image" src="./submit.jpg" alt="">
+    <input type="text" value="111111" id="" disabled>
+    <input type="text" value="222222" id="" readonly>
+    <input type="file" name="" id="">
+    <!-- input 
+      image 可以变为图片提交按钮，个性化提交可以使用，需要注意css加载样式消耗大，还是改为图片加载消耗大，待后续论证。
+      text 输入框， disabled 禁用输入框，readonly 将输入框变为只读模式。
+      file 上传文件
+    -->
+  </form>
+  <br>
+
+  <!-- select 
+    size 展示几个，multiple 多选，可以同时选择几个
+    selected 选中态， 切记 单选时，多加这个属性后面的会覆盖前面的 ，多选时，可以随意加
+  -->
+
+  <!-- 单选 -->
+  <select name="" id="" >
+    <option value="ln">辽宁</option>
+    <option value="sd">山东</option>
+    <option value="sx">山西</option>
+    <option value="bj" selected>北京</option>
+    <option value="bj">zg</option>
+    <option value="bj" selected>ad</option>
+  </select>
+  <br>
+  
+  <!-- 多选 -->
+  <select name="" id="" multiple="3">
+    <option value="ln">辽宁</option>
+    <option value="sd">山东</option>
+    <option value="sx" selected>山西</option>
+    <option value="22">22</option>
+    <option value="33">33</option>
+    <option value="bj" selected>北京</option>
+  </select>
+  <br>
+
+  <!--  文本textarea 的设置
+
+
+   -->
+  <textarea placeholder="请输入你的意见" cols="10" rows="2">aini1o1</textarea>
+
+  <!-- fieldset 字符集功能，配合legend使用 -->
+  <fieldset>
+    <legend>1
+      英雄联盟
+    </legend>
+    <input type="checkbox" name="aa" id="1"><label for="1">挖掘机</label>
+    <input type="checkbox" name="aa" id="2"><label for="2">螳螂</label>
+  </fieldset>
+
+  <!-- h5 语法改变 结束可以不写结束标签 -->
+
+  <!-- 音频 -->
+  <h1>音频</h1>
+  <audio src="./jiejie.wav" controls loop autoplay muted>2</audio>
+  <h2>视频</h2>
+  <!-- poster 属性海报、初始化 -->
+  <video src="./movie.mp4" controls loop autoplay poster="./submit.jpg"></video>
+</body>
+</html>

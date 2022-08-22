@@ -1,0 +1,74 @@
+<!--
+ * @作者: kerwin
+ * @公众号: 大前端私房菜
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background:red;
+            animation: kerwinrun1 2s linear infinite;
+
+            /* infinite 无限次 */
+        }
+
+        /* 声明动画 */
+        @keyframes kerwinrun1 {
+            from{
+                width: 200px;
+                height: 200px;
+                background:red;
+            }
+
+            to{
+                width: 400px;
+                height: 600px;
+                background:green;
+            }
+        }
+
+        @keyframes kerwinrun2 {
+            0%{
+                width: 200px;
+                height: 200px;
+                background:red;
+            }
+
+            25%{
+                width: 200px;
+                height: 400px;
+                background:yellow;
+            }
+
+            50%{
+                width: 400px;
+                height: 400px;
+                background:blue;
+            }
+
+
+            75%{
+                width: 400px;
+                height: 500px;
+                background:gray;
+            }
+
+
+            100%{
+                width: 400px;
+                height: 600px;
+                background:green;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

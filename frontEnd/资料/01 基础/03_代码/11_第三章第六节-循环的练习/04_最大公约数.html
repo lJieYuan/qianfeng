@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+    // 案例 - 最大公约数
+
+    // 第一段
+    // // 准备两个变量, 保存两个数字
+    // var max = 24
+    // var min = 12
+
+    // // 从相对小的数字向 1 进行循环
+    // for (var i = min; i >= 1; i--) {
+    //   // 输出看一下 i
+    //   console.log( i )
+    // }
+
+
+    // 第二段
+    // 准备两个变量, 保存两个数字
+    // var max = 24
+    // var min = 12
+
+    // // 从相对小的数字向 1 进行循环
+    // for (var i = min; i >= 1; i--) {
+    //   // 判断能被 max 和 min 整除
+    //   if (max % i === 0 && min % i === 0) {
+    //     // 输出这个数字
+    //     console.log(i)
+    //   }
+    // }
+
+    // 准备两个变量, 保存两个数字
+    var max = 24
+    var min = 12
+
+    // 从相对小的数字向 1 进行循环
+    for (var i = min; i >= 1; i--) {
+      // 判断能被 max 和 min 整除
+      if (max % i === 0 && min % i === 0) {
+        // 输出这个数字
+        console.log(i)
+        // 这里可以直接结束循环了
+        break
+      }
+    }
+  </script>
+</body>
+</html>

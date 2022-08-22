@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    div {
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <button>操作类名</button>
+  <div style="width: 100px; height: 100px; background-color: pink;">文本内容</div>
+
+  <script>
+    // 操作元素类名
+
+    // 获取元素
+    var box = document.querySelector( 'div' )
+    var btn = document.querySelector( 'button' )
+
+    // 获取样式
+    console.log( window.getComputedStyle(box).width )
+    console.log( window.getComputedStyle(box).height )
+    console.log( window.getComputedStyle(box).fontSize )
+
+  </script>
+</body>
+</html>

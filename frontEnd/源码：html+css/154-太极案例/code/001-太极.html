@@ -1,0 +1,47 @@
+<!--
+ * @作者: kerwin
+ * @公众号: 大前端私房菜
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background:lightblue;
+        }
+        div{
+            width: 200px;
+            height: 200px;
+            background:linear-gradient(white 50%,black 50%);
+            margin:10px auto;
+            display: flex;
+            align-items: center;
+            border-radius: 50%;
+        }
+
+        div::before{
+            content:"";
+            display: block;
+            width:100px;
+            height: 100px;
+            background:radial-gradient(white 25%,black 30%);
+            border-radius: 50%;
+        }
+        div::after{
+            content:"";
+            display: block;
+            width:100px;
+            height: 100px;
+            background:radial-gradient(black 25%,white 30%);
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
