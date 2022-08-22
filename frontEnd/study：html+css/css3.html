@@ -89,10 +89,34 @@
       color: blue;
     }
 
-    /* 独生子女选择器 */
+    /* 独生子女：只选择有一个元素的选择器 */
     .only p:only-child{
       background-color: blueviolet;
     }
+
+    /* 指定元素中只有同一个类型的元素选择器 选择第一个元素 */
+    .only p:only-of-type{
+      background-color: royalblue;
+    }
+
+    /* 指定元素中选择最后一个元素 */
+    .only p:last-of-type{
+      
+    }
+    
+    /* 不包含选择器，可搭配其它选择器混合使用 */
+    .only p:not(:first-child){
+      color: cadetblue;
+    }
+
+    
+
+    /* 无内容选择器 */
+    .empty:empty{
+      border-bottom: 10px solid royalblue;
+    }
+
+    
   </style>
 </head>
 <body>
@@ -138,17 +162,33 @@
     <li>5</li>
     <li>6</li>
   </ul>
-
+  <br>
+  <br>
+  <br>
+  <br>
+  only
   <div class="only">
     <p>1</p>
-    <p>2</p>
+    <p>222222</p>
+    <p>222222</p>
+    <p>222222</p>
+    <p>222222</p>
+    <p>222222</p>
+    <p>222222</p>
   </div>
   <div class="only">
     <p>1</p>
+    <div>2222233</div>
   </div>
 
-  <div class="emtyp">
-    
-  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  empty
+  <div class="empty">1</div>
+  <div class="empty">2</div>
+  <div class="empty">3</div>
+  <div class="empty"></div>
 </body>
 </html>
