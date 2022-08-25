@@ -36,7 +36,7 @@
     ~=全部匹配， ^=开头匹配，&= 结束匹配 ， *= 检测字符匹配
     */
     
-    [class]{
+    /* [class]{
       width: 100%;
       height: 30px;
       line-height: 30px;
@@ -68,7 +68,7 @@
 
     [class*='ar']{
       border-left: 10px solid wheat;
-    }
+    } */
 
     /* 结构伪类选择器 */
     ul>li{
@@ -104,7 +104,7 @@
       
     }
     
-    /* 不包含选择器，可搭配其它选择器混合使用 */
+    /* 否定选择器 不包含选择器，可搭配其它选择器混合使用 */
     .only p:not(:first-child){
       color: cadetblue;
     }
@@ -121,7 +121,129 @@
       background-color: aqua;
     }
 
+    .con-wrap p{
+      display: none;
+    }
+
+    .con-wrap p:target{
+      display: block !important;
+    }
     
+
+    /* 目标伪类元素选择器 */
+    /* .target-wrap{
+      width: 100px;
+      height: 200px;
+      position: fixed;
+      top: 45%;
+      right: 0;
+    }
+
+    .target-wrap>div{
+      border-bottom: 1px solid red;
+    }
+
+    #target1{
+      width: 100%;
+      height: 600px;
+      background-color: red;
+    }
+    #target2{
+      width: 100%;
+      height: 600px;
+      background-color: antiquewhite;
+    }
+
+    div:target{
+      color: bisque;
+      background-color: blue !important;
+    } */
+
+    /* ui伪类选择器 */
+    /* 正常情况下 */
+    /* input:enabled{
+      background-color: antiquewhite;
+    } */
+    /* 禁用情况下 */
+    /* input:disabled{
+      background-color: blueviolet;
+    } */
+    /* 获取焦点 */
+    /* input:focus{
+      background-color: violet;
+    } */
+    /* checkbox 会受到默认样式的管控 */
+    input[type=checkbox]:checked{
+      background-color:brown;
+    }
+    /* 去掉checkbox 默认样式 */
+    input[type=checkbox]{
+      appearance: none;
+      width: 200px;
+      height: 200px;
+      border: 1px solid royalblue;
+    }
+
+    /* selection 匹配用户选中或处于高亮的部分 */
+    p::selection{
+      background-color: black;
+      color: brown;
+    }
+
+    /* text-shadow 文本模糊阴影 水平方向，垂直方向，模糊程度，颜色 */
+    .nhy{
+      text-shadow: 10px 10px 1px red,-20px -20px 2px blueviolet;
+    }
+
+    /* box-shadow 盒子阴影 水平阴影，垂直阴影，模糊距离，阴影大小、阴影颜色，内外阴影 */
+    .d-wrap{
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      margin: 20px auto;
+      box-shadow: 10px 10px 2px 10px lawngreen inset,-10px -10px 10px 10px blue inset;
+    }
+
+    .border-wrap{
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      margin: 20px auto;
+      /* 上下左右 */
+      /* border-radius: 10px; */
+      /* 左上右下、右上左下 */
+      /* border-radius: 10px 40px; */
+      /* 上、左下右上、右下 */
+      /* border-radius: 10px 20px 30px; */
+      /* 上、右、下、左 */
+      /* border-radius: 10px 6px 15px 20px; */
+      /* 单词规律垂直在前水平在后 */
+      /* border-top-left-radius: 10px;
+      border-top-right-radius: 30px;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 40px; */
+      border-radius: 20px/40px;
+      /* border-radius: 20px 40px; */
+    }
+    .yuan-wrap{
+      width: 200px;
+      height: 100px;
+      background-color: red;
+      margin: 20px auto;
+      /* 全园的规律是，宽度高度必须一样 */
+      /* border-radius: 100px; */
+      /* height: 200px; */
+
+      /* 半圆的规律是，高度必须是宽度的一般 */
+      /* border-radius: 100px 100px 0 0; */
+
+      /* 扇形 */
+      /* height: 100px;
+      border-radius: 100px 100px 0 0; */
+
+      height: 200px;
+      border-radius: 200px 0 0 0;
+    }
   </style>
 </head>
 <body>
@@ -158,7 +280,7 @@
   </ul> -->
 
   <!-- 结构伪类选择器 -->
-  结构伪类选择器
+  <!-- 结构伪类选择器
   <ul>
     <li>1</li>
     <li>2</li>
@@ -194,6 +316,74 @@
   <div class="empty">1</div>
   <div class="empty">2</div>
   <div class="empty">3</div>
-  <div class="empty"></div>
+  <div class="empty"></div> -->
+  <!-- <ul class="ul-wrap">
+    <li>11</li>
+    <li>22</li>
+    <li>33</li>
+    <li>44</li>
+  </ul> -->
+
+  <!-- 目标伪类选择器 -->
+  <!-- <div id="target1" class="target">11</div>
+  <div id="target2" class="target">22</div>
+  <div class="target-wrap">
+    <div><a href="#target1">11</a></div>
+    <div><a href="#target2">22</a></div>
+  </div> -->
+
+  <!-- 手风琴 -->
+  <!-- <ul class="con-wrap">
+    <li>
+      <a href="#p1">目标伪类选择器</a>
+      <p id="p1">
+        今天是个好日子，爱你么么哒1
+      </p>
+    </li>
+    <li>
+      <a href="#p2">目标伪类选择器</a>
+      <p id="p2">
+        今天是个好日子，爱你么么哒2
+      </p>
+    </li>
+  </ul> -->
+
+  <!-- ui伪类选择器 -->
+  <form action="">
+    用户名：<input type="text" name="name" id="">
+    密码：<input type="password" name="password" id="" disabled>
+    自定义：<input type="text" name="add" id="zdy">
+    checkbox:<input type="checkbox" name="checkbox">
+    <input type="submit" value="提交">
+  </form>
+  <p>
+    wjdiwifhfiefhuwighweughugweughwguhruhgruheghuegegr2
+    wjdiwifhfiefhuwighweughugweughwguhruhgruheghuegegr
+    wjdiwifhfiefhuwighweughugweughwguhruhgruheghuegegr
+    wjdiwifhfiefhuwighweughugweughwguhruhgruheghuegegr
+    wjdiwifhfiefhuwighweughugweughwguhruhgruheghuegegr
+    wjdiwifhfiefhuwighweughugweughwguhruhgruheghuegegr
+    wjdiwifhfiefhuwighweughugweughwguhruhgruheghuegegr
+    wjdiwifhfiefhuwighweughugweughwguhruhgruheghuegegr2
+    wjdiwifhfiefhuwighweughugweughwguhruhgruheghuegegr
+    wjdiwifhfiefhuwighweughugweughwguhruhgruheghuegegr
+    wjdiwifhfiefhuwighweughugweughwguhruhgruheghuegegr
+    wjdiwifhfiefhuwighweughugweughwguhruhgruheghuegegr
+    wjdiwifhfiefhuwighweughugweughwguhruhgruheghuegegr
+    wjdiwifhfiefhuwighweughugweughwguhruhgruheghuegegr
+    wjdiwifhfiefhuwighweughugweughwguhruhgruheghuegegr
+    wjdiwifhfiefhuwighweughugweughwguhruhgruheghuegegr
+    wjdiwifhfiefhuwighweughugweughwguhruhgruheghuegegr
+    wjdiwifhfiefhuwighweughugweughwguhruhgruheghuegegr
+    wjdiwifhfiefhuwighweughugweughwguhruhgruheghuegegr
+    wjdiwifhfiefhuwighweughugweughwguhruhgruheghuegegr
+    wjdiwifhfiefhuwighweughugweughwguhruhgruheghuegegr
+  </p>
+
+
+  <div class="nhy">你好呀我好累</div>
+  <div class="d-wrap"></div>
+  <div class="border-wrap"></div>
+  <div class="yuan-wrap"></div>
 </body>
 </html>
