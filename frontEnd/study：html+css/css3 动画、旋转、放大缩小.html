@@ -1,0 +1,223 @@
+<!--
+ * @Author: lJieYuan 36994097+lJieYuan@users.noreply.github.com
+ * @Date: 2022-08-24 15:50:51
+ * @LastEditors: lJieYuan 36994097+lJieYuan@users.noreply.github.com
+ * @LastEditTime: 2022-08-28 14:45:18
+ * @FilePath: /qianfeng/frontEnd/study：html+css/css3案例.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    html,body{
+
+      background-color: aqua;
+      padding: 10px;
+    }
+
+    .div{
+      /* width: 600px; */
+      /* height: 600px; */
+      /* 线性渐变 */
+      /* background: linear-gradient(100deg, green,red,blue,yellow); */
+      /* 径向渐变 */
+      /* background: repeating-radial-gradient(red,yellow 10%,green 20%); */
+    }
+    /* 太极图 */
+    .taiji{
+      width: 200px;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      border-radius: 50%;
+      margin: 20px auto;
+      background: linear-gradient(white 50%,black 50%);
+    }
+
+    /* before 在元素之前 */
+    .taiji::before{
+      content: '';
+      display: block;
+      width: 100px;
+      height: 100px;
+      background: radial-gradient(white 25%, black 30%);
+      border-radius: 50%;
+    }
+
+    /* after 在元素之后 */
+    .taiji::after{
+      content: '';
+      display: block;
+      width: 100px;
+      height: 100px;
+      background: radial-gradient(black 25%,white 30%);
+      border-radius: 50%;
+    }
+
+    .caidan{
+      width: 200px;
+      text-align: center;
+      background-color: aquamarine;
+      /* 可以监听多个属性，以逗号隔开 */
+      /* transition: width 2s linear 1s,height .5s ease .5s; */
+      /* 可以监听所有属性，除了 display:none 和block */
+      transition: all 2s linear;
+      overflow: hidden;
+    }
+
+    .caidan:hover{
+      /* width: 600px; */
+      /* height: 200px; */
+      background-color: blueviolet;
+    }
+    
+    .caidan:hover .menu{
+      height: 240px;
+    }
+    .menu li{
+      margin-top: 20px;
+      width: 20px;
+      height: 40px;
+      border: 2px solid royalblue;
+    }
+
+    .menu{
+      height: 0;
+      /* 谁执行监听谁 */
+      transition: all 6s linear;
+    }
+
+    .quxian{
+      width: 300px;
+    }
+
+    .quxian li{
+      width: 100px;
+      height: 100px;
+      line-height: 100px;
+      text-align: center;
+      border: 1px solid red;
+      /* transition 谁的属性变化transition 加给谁 */
+      
+    }
+
+    .quxian li:nth-child(1){
+      transition: all 2s linear;
+    }
+
+    .quxian li:nth-child(2){
+      /* 缓慢，然后快速，然后在缓慢结束的过渡效果 */
+      transition: all 2s ease;
+    }
+
+    .quxian li:nth-child(3){
+      /* 缓慢启动的过渡效果 */
+      transition: all 2s ease-in;
+    }
+
+    .quxian li:nth-child(4){
+      /* 缓慢结束的过渡效果 */
+      transition: all 2s ease-out;
+    }
+
+    .quxian li:nth-child(5){
+      /* 指定开始和结束缓慢的过渡效果 */
+      transition: all 2s ease-in-out;
+    }
+
+    .quxian li:nth-child(6){
+      /* 在一个三贝尓曲线中定义过渡效果 */
+      transition: all 2s cubic-bezier(.17,.67,.83,.67);
+    }
+    
+    .quxian:hover li{
+      width: 400px;
+    }
+
+    .transform{
+      width: 200px;
+      height: 200px;
+      background-color: aquamarine;
+      
+    }
+
+    .transform:hover{
+      /* transform: translateX(20px) translateY(30px) translateZ(60px); */
+      transform: translate(20px,30px);
+    }
+
+    .scale{
+      width: 200px;
+      height: 200px;
+      margin: 220px auto;
+      transition: all 2s linear;
+    }
+
+    .scale:hover{
+      transform: scale(10);
+    }
+
+    .scale img{
+      width: 100%;
+      height: 100%;
+    }
+        /*  
+    transition: 指定动画
+    ease - 指定一个缓慢开始，然后快速，然后慢慢结束的过渡效果(这是默认值)
+    linear - 指定从开始到结束以相同速度的转换效果
+    ease-in - 指定缓慢启动的过渡效果
+    ease-out - 指定一个缓慢结束的过渡效果
+    ease-in-out - 指定开始和结束缓慢的过渡效果
+    cubic-bezier(n,n,n,n) - 在一个三次贝塞尔函数中定义您自己的 
+
+    transform 指定放大缩小、平移功能、旋转功能
+    */
+  </style>
+  
+</head>
+<body>
+  <!-- <div class="div">
+  </div>
+  <div class="taiji">
+
+  </div>
+  <div class="caidan">我的菜单
+
+    <ul class="menu">
+      <li>111</li>
+      <li>111</li>
+      <li>111</li>
+      <li>111</li>
+      <li>111</li>
+      <li>111</li>
+    </ul>
+  </div>
+
+  <ul class="quxian">
+    <li>111111</li>
+    <li>111111</li>
+    <li>111111</li>
+    <li>111111</li>
+    <li>111111</li>
+    <li>111111</li>
+  </ul>
+
+  <div class="transform">
+
+  </div> -->
+
+  <div class="scale">
+    <img src="./scale.png" alt="">
+  </div>
+  
+</body>
+</html>

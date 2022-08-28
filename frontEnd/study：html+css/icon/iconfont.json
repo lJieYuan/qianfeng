@@ -1,0 +1,51 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "31421650",
+      "name": "帮助",
+      "font_class": "bangzhu",
+      "unicode": "e696",
+      "unicode_decimal": 59030
+    },
+    {
+      "icon_id": "31421651",
+      "name": "更多3",
+      "font_class": "gengduo3",
+      "unicode": "e697",
+      "unicode_decimal": 59031
+    },
+    {
+      "icon_id": "31421652",
+      "name": "功能1",
+      "font_class": "gongneng1",
+      "unicode": "e698",
+      "unicode_decimal": 59032
+    },
+    {
+      "icon_id": "31421653",
+      "name": "切换",
+      "font_class": "qiehuan",
+      "unicode": "e699",
+      "unicode_decimal": 59033
+    },
+    {
+      "icon_id": "31421654",
+      "name": "拍照",
+      "font_class": "paizhao",
+      "unicode": "e69a",
+      "unicode_decimal": 59034
+    },
+    {
+      "icon_id": "31421655",
+      "name": "标签",
+      "font_class": "biaoqian",
+      "unicode": "e69b",
+      "unicode_decimal": 59035
+    }
+  ]
+}

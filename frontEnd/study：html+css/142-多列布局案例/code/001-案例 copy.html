@@ -1,0 +1,109 @@
+<!--
+ * @Author: lJieYuan 36994097+lJieYuan@users.noreply.github.com
+ * @Date: 2022-08-27 16:19:30
+ * @LastEditors: lJieYuan 36994097+lJieYuan@users.noreply.github.com
+ * @LastEditTime: 2022-08-27 16:35:55
+ * @FilePath: /qianfeng/frontEnd/study：html+css/142-多列布局案例/code/001-案例 copy.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AEht
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+        .box{
+            background-image: url(./images/a.png);
+            columns: 6;
+            padding: 10px;
+            
+        }
+        .box>div{
+            /* 注意，当我们设置多列布局的时候，内容会被称出去，会被折行，所以我们需要解决它。 */
+            break-inside: avoid;
+            border: 3px solid rebeccapurple;
+            margin-top: 10px;
+            text-align: center;
+        }
+        .box img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div>
+            <img src="images/1.jpg" alt="">
+            <p>赵钱孙李</p>
+        </div>
+        <div>
+            <img src="images/2.jpg" alt="">
+            <p>赵钱孙李</p>
+        </div>
+        <div>
+            <img src="images/3.jpg" alt="">
+            <p>赵钱孙李</p>
+        </div>
+        <div>
+            <img src="images/4.jpg" alt="">
+            <p>赵钱孙李</p>
+        </div>
+        <div>
+            <img src="images/5.jpg" alt="">
+            <p>赵钱孙李</p>
+        </div>
+        <div>
+            <img src="images/6.jpg" alt="">
+            <p>赵钱孙李</p>
+        </div>
+        <div>
+            <img src="images/7.jpg" alt="">
+            <p>赵钱孙李</p>
+        </div>
+
+        <div>
+            <img src="images/8.jpg" alt="">
+            <p>赵钱孙李</p>
+        </div>
+
+        <div>
+            <img src="images/9.jpg" alt="">
+            <p>赵钱孙李</p>
+        </div>
+        <div>
+            <img src="images/10.jpg" alt="">
+            <p>赵钱孙李</p>
+        </div>
+        <div>
+            <img src="images/11.jpg" alt="">
+            <p>赵钱孙李</p>
+        </div>
+        <div>
+            <img src="images/12.jpg" alt="">
+            <p>赵钱孙李</p>
+        </div>
+        <div>
+            <img src="images/13.jpg" alt="">
+            <p>赵钱孙李</p>
+        </div>
+        <div>
+            <img src="images/14.jpg" alt="">
+            <p>赵钱孙李</p>
+        </div>
+        <div>
+            <img src="images/15.jpg" alt="">
+            <p>赵钱孙李</p>
+        </div>
+    </div>
+</body>
+</html>

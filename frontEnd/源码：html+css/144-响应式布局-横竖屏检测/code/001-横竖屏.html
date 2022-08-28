@@ -1,4 +1,12 @@
 <!--
+ * @Author: lJieYuan 36994097+lJieYuan@users.noreply.github.com
+ * @Date: 2021-11-13 11:32:58
+ * @LastEditors: lJieYuan 36994097+lJieYuan@users.noreply.github.com
+ * @LastEditTime: 2022-08-27 17:58:34
+ * @FilePath: /qianfeng/frontEnd/源码：html+css/144-响应式布局-横竖屏检测/code/001-横竖屏.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!--
  * @作者: kerwin
  * @公众号: 大前端私房菜
 -->
@@ -26,12 +34,23 @@
             
         }
 
+        /* 
+        1、portrait 竖屏 表示竖屏比横屏长的时候
+        2、landscape 横屏 表示横屏比竖屏长的时候
+        */
+
+        /* 
+            em 和  rem 的区别
+            em 永远相对于父元素的px值， 如果父元素也为em ，那继续向上查找，查找到px的值。
+            rem 永远相对于跟元素 ， html 的px 值，rem用的更多一些，设置好想对单位统一调整。
+        */
+
         @media screen  and (orientation:portrait){
             div{
                 width: 33.333%;
             }
         }
-
+        
         @media screen  and (orientation:landscape){
             div{
                 width: 20%;
