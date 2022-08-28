@@ -1,0 +1,101 @@
+<!--
+ * @Author: lJieYuan 36994097+lJieYuan@users.noreply.github.com
+ * @Date: 2022-08-28 15:27:02
+ * @LastEditors: lJieYuan 36994097+lJieYuan@users.noreply.github.com
+ * @LastEditTime: 2022-08-28 16:13:47
+ * @FilePath: /qianfeng/frontEnd/study：html+css/扇子.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    ul{
+      width: 600px;
+      height: 600px;
+      margin: 200px auto;
+      border: 1px solid black;
+      position: relative;
+      transition: all 2s linear;
+    }
+
+    ul li{
+      width: 60px;
+      height: 200px;
+      position: absolute;
+      bottom: 0px;
+      left: 50%;
+      margin-left: -30px;
+      background-color: red;
+      border: 1px solid black;
+      border: 20px;
+      box-shadow: 5px 5px 5px black;
+      transform-origin: bottom center;
+
+    }
+    ul:hover{
+      /* transform: rotate(); */
+    }
+  </style>
+</head>
+<body>
+  <ul class="ul">
+  </ul>
+  <script>
+    function computeShangzi({center,count}){
+      const result = [];
+      const rotate = 90;
+      const rotateEdg = rotate / ((count - 1) / 2);
+      let rotates = rotate;
+      const colorAry = ['purple','pink','deeppink','deepskyblue','green','yellow','red','purple','pink','deeppink','deepskyblue','green','yellow','red','pink','deeppink','deepskyblue','green','yellow','red'];
+      for (let index = 0; index < count; index++) {
+        if(index !== 0) rotates = rotates - rotateEdg;
+        const obj = {
+          text: index + 1,
+          opacity: 0,
+          rotate: rotates,
+          initRotate: 0,
+          backgroundColor:colorAry[index],
+        };
+        if(index === center){
+          obj.opacity = 1;
+        }
+        result.push(obj);
+      }
+      return result;
+    }
+    const shangZi = computeShangzi({center:6,count:16});
+    console.log(shangZi);
+
+    const $ul = document.getElementsByTagName('ul')[0];
+    shangZi.forEach((item)=>{
+      const {text,opacity,initRotate,rotate,backgroundColor} = item;
+      const lis = document.createElement('li');
+      lis.innerText = text;
+      lis.style = `opacity:${opacity};transform:rotate(${initRotate}deg);background-color:${backgroundColor}`;
+      $ul.appendChild(lis);
+    });
+
+    $ul.onmouseover = function(event){
+      console.log(11,event)
+      const {target} = event;
+      if(target.className !== 'ul') return;
+      const $li = document.getElementsByTagName('li');
+      console.log($li,Object.values($li));
+      Object.values($li).forEach((item,index)=>{
+        const {rotate,backgroundColor} = shangZi[index];
+        console.log(shangZi[index]);
+        item.style = `opacity:${1};transform:rotate(${rotate}deg);background-color:${backgroundColor}`;
+      });
+    }
+  </script>
+</body>
+</html>
