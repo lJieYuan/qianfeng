@@ -1,0 +1,109 @@
+<!--
+ * @Author: lJieYuan 36994097+lJieYuan@users.noreply.github.com
+ * @Date: 2022-08-28 19:27:21
+ * @LastEditors: lJieYuan 36994097+lJieYuan@users.noreply.github.com
+ * @LastEditTime: 2022-08-28 19:47:28
+ * @FilePath: /qianfeng/frontEnd/study：html+css/174-3d-立方体/code/study.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+    }
+
+    body{
+      background-color: aquamarine;
+    }
+
+    .box{
+      width: 600px;
+      height: 600px;
+      border: 1px solid black;
+      margin: 0 auto;
+      position: relative;
+      /* 默认2d */
+      /* transform-style: flat; */
+      transform-style: preserve-3d;
+      /* transform: rotate3d(30deg,30deg); */
+      transform: rotateX(30deg) rotateY(30deg);
+      animation: run 6s linear infinite;
+    }
+
+    .box div{
+      width: 200px;
+      height: 200px;
+      text-align: center;
+      line-height: 200px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -100px;
+      margin-left: -100px;
+      opacity: 0.7;
+    }
+
+    @keyframes run{
+      0%{
+          transform: rotateY(30deg) rotateX(30deg);
+      }
+
+      50%{
+          transform: rotateY(300deg) rotateX(300deg);
+      }
+
+      100%{
+          transform: rotateY(30deg) rotateX(30deg);
+      }
+    }
+
+    .box div:nth-child(1){
+      background-color: aqua;
+      transform: translateZ(100px);
+    }
+
+    .box div:nth-child(2){
+      background-color: darkcyan;
+      transform: translateX(-100px) rotateY(-90deg);
+    }
+
+    .box div:nth-child(3){
+      background-color: blue;
+      transform: translateY(-100px) rotateX(90deg);
+    }
+
+    .box div:nth-child(4){
+      background-color: blueviolet;
+      transform: translateY(100px) rotateX(-90deg);
+    }
+
+    .box div:nth-child(5){
+      background-color: darkkhaki;
+      transform: translateX(100px) rotateY(90deg);
+    }
+
+    .box div:nth-child(6){
+      background-color: darkred;
+      transform: translateZ(-100px);
+    }
+
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+  </div>
+</body>
+</html>

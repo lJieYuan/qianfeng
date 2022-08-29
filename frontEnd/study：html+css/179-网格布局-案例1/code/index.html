@@ -1,0 +1,71 @@
+<!--
+ * @Author: lJieYuan 36994097+lJieYuan@users.noreply.github.com
+ * @Date: 2022-08-28 20:53:35
+ * @LastEditors: lJieYuan 36994097+lJieYuan@users.noreply.github.com
+ * @LastEditTime: 2022-08-28 21:08:30
+ * @FilePath: /qianfeng/frontEnd/study：html+css/179-网格布局-案例1/code/index.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    div{
+      width: 600px;
+      height: 600px;
+      border: 6px solid red;
+      margin: 20px auto;
+      display: grid;
+      grid-template-columns: repeat(6,auto);
+      grid-template-rows: repeat(3,auto);
+      grid-template-areas: 'a a a a b b'
+                           'a a a a g g'
+                           'c c d e g g'
+      ;
+      grid-gap: 10px 10px;
+    }
+
+    img:nth-child(1){
+      grid-area: a;
+    }
+    img:nth-child(2){
+      grid-area: b;
+    }
+    img:nth-child(3){
+      grid-area: c;
+    }
+    img:nth-child(4){
+      grid-area: d;
+    }
+    img:nth-child(5){
+      grid-area: e;
+    }
+    img:nth-child(6){
+      grid-area: g;
+    }
+    img{
+      width: 100%;
+      height: 100%;
+      border: 1px solid red;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <img src="images/a1.png" alt="">
+    <img src="images/a2.png" alt="">
+    <img src="images/a3.png" alt="">
+    <img src="images/a4.png" alt="">
+    <img src="images/a5.png" alt="">
+    <img src="images/a6.png" alt="">
+  </div>
+</body>
+</html>
