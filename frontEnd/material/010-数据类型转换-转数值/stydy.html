@@ -1,0 +1,74 @@
+<!--
+ * @Author: lJieYuan 36994097+lJieYuan@users.noreply.github.com
+ * @Date: 2022-08-29 21:16:24
+ * @LastEditors: lJieYuan 36994097+lJieYuan@users.noreply.github.com
+ * @LastEditTime: 2022-08-29 23:18:25
+ * @FilePath: /qianfeng/frontEnd/material/010-数据类型转换-转数值/stydy.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AEar 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // 总结
+        // number 函数去转换变量时：
+        // 1、如果值类型是null 会检测出object , 同时number函数去转换时 会变成 0
+        // 2、number 函数去转换时，如果值为 {} , 检测类型为Object ， Number值会变成 NaN
+        // 3、总结，number 函数 除了number类型、null 其它都会转换为 NaN
+        var a = 123;
+        console.log(a,typeof a ,typeof(a));
+        // console.log()
+        var b = '123';
+        console.log(b,typeof b,Number(b)); // 123 数字
+        b = '12323a';
+        console.log(b,typeof b,Number(b)); // NAN
+        b = NaN;
+        console.log(b,typeof b,Number(b)); // nan === number number!==nan
+        b = null; 
+        console.log(b,typeof b,Number(b)); // null, Object , 0 ,  typeof null === object 
+        b = undefined; 
+        console.log(b,typeof b,Number(b)); // undefined NaN
+        b = {}; 
+        console.log(b,typeof b,Number(b)); // {}, Object , NAN
+        b = {
+            name:'1',
+        }; 
+        console.log(b,typeof b,Number(b));
+        // parseInt 解析时，会解析当前每个数字，直到解析不为数字为止，缺点不能保存小数类型
+        b = 12;
+        console.log(b,typeof b,parseInt(b));
+        b = '99';
+        console.log(b,typeof b,parseInt(b));
+        b = '99a';
+        console.log(b,typeof b,parseInt(b));
+        b = '9x9a99';
+        console.log(b,typeof b,parseInt(b));
+        b = {
+            1:'1'
+        };
+        console.log(b,typeof b,parseInt(b));
+        b = ['a2',1,2];
+        console.log(b,typeof b,parseInt(b));
+
+        b = null;
+        console.log(b,typeof b,parseInt(b));
+        // parseFloat 解析时，会解析当前每个数字，直到解析不为数字为止，可以保存小数类型，但是不能四舍五入
+        b = '99.99999999a9';
+        console.log(b,typeof b,parseFloat(b));
+        b = '99.99.999999a9';
+        console.log(b,typeof b,parseFloat(b));
+        b = '99.99999999a9';
+        console.log(b,typeof b,parseFloat(b,2));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

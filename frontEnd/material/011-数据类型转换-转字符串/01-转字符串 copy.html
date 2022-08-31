@@ -1,0 +1,72 @@
+<!--
+ * @Author: lJieYuan 36994097+lJieYuan@users.noreply.github.com
+ * @Date: 2022-08-29 22:29:51
+ * @LastEditors: lJieYuan 36994097+lJieYuan@users.noreply.github.com
+ * @LastEditTime: 2022-08-29 23:29:24
+ * @FilePath: /qianfeng/frontEnd/material/011-数据类型转换-转字符串/01-转字符串 copy.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%A 
+-->
+<!--
+ * @作者: kerwin
+ * @公众号: 大前端私房菜
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        var str;
+        console.log(str,typeof str,String(str));
+        str = '123rf';
+        console.log(str,typeof str,String(str));
+        str = true;
+        console.log(str,typeof str,String(str));
+        str = NaN;
+        console.log(str,typeof str,String(str));
+        str = {
+            name:1
+        };
+        // string 在转换一个对象时会把它变为 字符串的数组 俩个元素，分别为小写的object 和 大写的Object 
+        // 
+        console.log(str,typeof str,String(str),String(str) === "[object Object]");
+        str = Object({
+            name:1,
+        });
+        console.log(str,typeof str,String(str),String(str) === "[object Object]");
+
+        // 底层在转换数组时，会把它变为一个字符串， typeof 在检测时，会把array 变为小写的object ，null 也是 
+        str = [null,1,23,[29,32],[2,[99,1,'222','dwdwdq2',{
+            a:1,
+        }]]]; 
+        console.log(str,typeof str,String(str));
+        console.log(str,typeof str,str.toString());
+        str = null;
+        console.log(str,typeof str,String(str));
+        // console.log(str,typeof str,str.toString());
+
+        str = undefined;
+        console.log(str,typeof str,String(str));
+        // console.log(str,typeof str,str.toString());
+
+        str = NaN;
+        console.log(str,typeof str,str.toString());
+        console.log(str,typeof str,str.toString());
+
+        // str = null;
+        // console.log(str,typeof str,str.toString());
+        // str = undefined;
+        // console.log(str,typeof str,str.toString());
+
+        // 总结：string 函数方法都可以转， 变量.toString() 方法，不可以转undefined 和 null
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
