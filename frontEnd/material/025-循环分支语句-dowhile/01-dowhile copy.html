@@ -1,0 +1,45 @@
+<!--
+ * @Author: lJieYuan 36994097+lJieYuan@users.noreply.github.com
+ * @Date: 2022-08-31 22:03:34
+ * @LastEditors: lJieYuan 36994097+lJieYuan@users.noreply.github.com
+ * @LastEditTime: 2022-08-31 22:16:01
+ * @FilePath: /qianfeng/frontEnd/material/025-循环分支语句-dowhile/01-dowhile copy.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!--
+ * @作者: kerwin
+ * @公众号: 大前端私房菜
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // do while 先执行一次代码体，在判断是否满足条件
+        var n = 0
+        do{
+            n++;
+            var res = prompt();
+            console.log('你看看我一般走几次',n);
+            if(res){
+                document.write(res);
+            }
+        }while(!res){
+            console.log('我执行完成啦');
+        }
+
+        const arr = [1,2,9,10];
+        arr[1000000] = 1;
+        arr.length = 10000000;
+        console.log('开始')
+        arr.forEach((item,index)=>{
+            console.log(item,index);
+        })
+        console.log('我想测试代码是否是异步的 会走这里')
+    </script>
+</body>
+</html>
