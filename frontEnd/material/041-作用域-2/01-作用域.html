@@ -1,4 +1,12 @@
 <!--
+ * @Author: lJieYuan 36994097+lJieYuan@users.noreply.github.com
+ * @Date: 2022-05-17 14:44:04
+ * @LastEditors: lJieYuan 36994097+lJieYuan@users.noreply.github.com
+ * @LastEditTime: 2022-09-02 11:39:58
+ * @FilePath: /qianfeng/frontEnd/material/041-作用域-2/01-作用域.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!--
  * @作者: kerwin
  * @公众号: 大前端私房菜
 -->
@@ -45,6 +53,11 @@
         }
         test3(1,2)
         console.log(result)
+
+        // 作用域是值变量可以生效的范围；
+        // 变量不是在所有地方都可以使用的，而这个变量可以使用的范围就是作用域
+        // 作用域的查找范围， 会先从自身作用域查找，自身作用域查找不到则向上一层作用域查找，最上层作用域也查找不到，则返回 is not defined ，
+        // 自身作用域里，写了全局变量，但未声明，js 引起在解析时 会自动声明。
     </script>
 </body>
 </html>

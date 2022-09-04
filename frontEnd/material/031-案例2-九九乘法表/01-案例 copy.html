@@ -1,0 +1,44 @@
+<!--
+ * @Author: lJieYuan 36994097+lJieYuan@users.noreply.github.com
+ * @Date: 2022-09-01 16:19:49
+ * @LastEditors: lJieYuan 36994097+lJieYuan@users.noreply.github.com
+ * @LastEditTime: 2022-09-01 21:41:40
+ * @FilePath: /qianfeng/frontEnd/material/031-案例2-九九乘法表/01-案例 copy.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!--
+ * @作者: kerwin
+ * @公众号: 大前端私房菜
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        span{
+            display: inline-block;
+            width: 90px;
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        const n = 9;
+        for(var i = 1;i<=n; i++){
+            for(var j = 1;j<=i;j++){
+                document.write("<span>"+i+'*'+j+'='+i*j+"</span>");
+            }
+            document.write('<br>');
+        }
+        
+        
+    </script>
+</body>
+
+</html>
