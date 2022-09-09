@@ -1,0 +1,153 @@
+<!--
+ * @作者: kerwin
+ * @公众号: 大前端私房菜
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // es6 新增8个数组的常用方法， forEach 循环，filter 过滤 ， some 只要数组中有一个条件满足就返回， every 数组中的每个数据都需要满足这个条件才能返回, reduce 累加，将数据进行累加
+        // find 查询数组中满足条件的那一项，与filter 不同点,filter 可以过滤出来所有满足条件的， find 只可以查到第一个满足条件的，当多个条件都满足时，只输出一个。
+        // map 映射 相当于对数组中的每一个值进行映射关系。
+        // find 只能返回满足条件的一个元素， 非数组，filter 当数组中多个元素满足条件，都被返回，值是全新的数组对象
+        Array.prototype.yjCallback = function(callback,prev,field){
+            let sum = prev;
+            for(let i = 0;i<this.length; i++){
+                const item = this[i];
+                sum += item[field];
+                callback(prev,item,i,this);
+            }
+            return sum;
+        }
+        const arr = [1,2,3,4,5,6];
+        const arr1 = [20,99,96,70,99,999,99];
+        const arr2 = [20,99,96,70,99];
+        const arr3 = [
+            {
+                name:'数学',
+                num:99,
+            },
+            {
+                name:'数学',
+                num:99,
+            },
+            {
+                name:'英语',
+                num:96,
+            },
+            {
+                name:'地理',
+                num:90,
+            },
+            {
+                name:'生物',
+                num:99,
+            },
+            {
+                name:'数学',
+                num:96,
+            },
+        ];
+        const arr4 = [
+            {
+                name:'语文',
+                num:99,
+            },
+            {
+                name:'语文',
+                num:99,
+            },
+        ];
+        console.log(arr,'arr');
+        console.log('====================================');
+        console.log('forEach',"------------start");
+        arr.forEach((item,index,ary)=>{
+            // console.log(item,index,ary);
+        });
+        console.log('forEach',"------------end");
+        console.log('====================================');
+
+        console.log('map','start');
+        // map 方法，映射数组的每一项，可以对数组的每一项进行数据操作。map返回一个全新的数组。
+        const mapArr = arr.map((item,index,ary)=>{
+            // console.log(item,index,ary);
+            return item * item;
+        });
+        console.log('map','end',mapArr);
+        console.log('====================================');
+
+        console.log('filter','start');
+        // 可以将数组中满足条件的都过滤出来
+        // 我想把成绩大于等于96的过滤出来，filter 返回一个全新的数组。只要满足条件就返回。 返回4个
+        const count = 96;
+        const filterArr = arr3.filter((item,index,ary)=>{
+            // console.log(item,index,ary);
+            return item.num >= count;
+        });
+        console.log('filter','end',filterArr);
+        console.log('====================================');
+
+        console.log('find','start');
+        // 可以将数组中满足条件的都过滤出来
+        
+        // 我想把成绩大于等于96的过滤出来，find 只返回当前元素，当前元素是number 那就返回具体数值。 注意只能返回第一个值。 返回一个 99 数组下标为1；
+        const findItem = arr3.find((item,index,ary)=>{
+            // console.log(item,index,ary);
+            return item.name === '数学';
+        });
+        console.log('find','end',findItem);
+        console.log('====================================');
+
+        console.log('findIndex','start');
+        // 把满足条件的数组下标返回
+        const findIndex = arr3.findIndex((item,index,ary)=>{
+            // console.log(item,index,ary);
+            return item.name === '数学';
+        });
+        console.log('findIndex','end',findIndex);
+        console.log('====================================');
+
+        console.log('every','start');
+        // 必须数组中每一个元素都满足这个条件，不满足则不返回。 返回值为 布尔值，true/false
+        const everyStatus = arr4.every((item,index,ary)=>{
+            // console.log(item,index,ary);
+            return item.name === '语文';
+        });
+        console.log('every','end',everyStatus);
+        console.log('====================================');
+
+        console.log('some','start');
+        // 数组中只要有一个元素都满足这个条件，则就返回true 不满足则返回false。 返回值为 布尔值，true/false
+        const someStatus = arr3.some((item,index,ary)=>{
+            return item.name === '语文';
+        });
+        console.log('some','end',someStatus);
+        console.log('====================================');
+
+        // reduce 数组累加方法，默认初始化一个数据值，根据这个数据值可以将数组的每一项进行累加。
+        // 接受4个参数，prev 上一次累加的结果，item，每一项，index下标，ary 数组。
+        console.log('reduce','start');
+        const reduceSum = arr3.reduce((prev,item,index,ary)=>{
+            console.log(prev,item,index,ary);
+            return prev + item.num;
+        },0)
+        console.log('reduce','end',reduceSum);
+        console.log('====================================');
+
+        // 自定义方法 yjCallback
+        console.log('yjCallback','start');
+        const yjCallback = arr4.yjCallback((prev,item,index,ary)=>{
+            console.log(prev,item,index,ary);
+            return prev + item.num;
+        },0,'num')
+        console.log('yjCallback','end',yjCallback);
+        console.log('====================================');
+
+    </script>
+</body>
+</html>

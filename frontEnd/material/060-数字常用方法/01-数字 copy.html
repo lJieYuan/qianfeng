@@ -1,0 +1,53 @@
+<!--
+ * @Author: lJieYuan 36994097+lJieYuan@users.noreply.github.com
+ * @Date: 2022-09-06 10:50:11
+ * @LastEditors: lJieYuan 36994097+lJieYuan@users.noreply.github.com
+ * @LastEditTime: 2022-09-06 14:47:01
+ * @FilePath: /qianfeng/frontEnd/material/060-数字常用方法/01-数字 copy.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!--
+ * @作者: kerwin
+ * @公众号: 大前端私房菜
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const price = 123.5660;
+        // number toFixed 方法， 四设六入五考虑，五后非0就进1，为0就看，5前为奇数就舍去，5前为偶数要进1
+        console.log(price.toFixed(2));
+        // Math对象 round 四舍五入方法
+        console.log(Math.round(price));
+        // random 随机数
+        console.log(Math.random());
+        // PI 圆周率
+        console.log(Math.PI);
+        // 最大值
+        console.log(Math.max(1,20,99,9999,6,9999999));
+        // 最小值
+        console.log(Math.min(1,20,99,9999,6,9999999));
+        // 绝对值
+        console.log(Math.abs(-999999));
+        console.log(Math.abs(999999));
+        // 向上取整
+        console.log(Math.ceil(price));
+        // 向下取整
+        console.log(Math.floor(price));
+        // 求取平方根
+        console.log(Math.sqrt(6));
+        // 数据的幂次方 6个6相乘
+        console.log(Math.pow(6,6));
+
+        
+
+
+        
+    </script>
+</body>
+</html>

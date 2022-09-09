@@ -1,0 +1,53 @@
+<!--
+ * @Author: lJieYuan 36994097+lJieYuan@users.noreply.github.com
+ * @Date: 2022-09-05 19:44:48
+ * @LastEditors: lJieYuan 36994097+lJieYuan@users.noreply.github.com
+ * @LastEditTime: 2022-09-05 20:15:05
+ * @FilePath: /qianfeng/frontEnd/material/000-websoket/index.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button>提交</button>
+  <script>
+
+    //  同一段代码，当初始化时，执行，会消耗大量的资源性能；
+    //  -> js是单线程，同一时间只能做一件事情，
+    //  -> 从上到下执行，当有大量的业务逻辑放在前端处理时，会阻塞页面加载。
+    //  -> h5 为我们提供啦新的API 
+    //  => 能基于浏览器给我们开辟一个新的线程。
+    //  => 我们可以把一个大量计算量的内容放在新的线程去做
+    //  => 主线程里做一些简单的业务逻辑。
+    //  => new Worker 语法
+    //  => new Worker('你要执行的第二个js文件路径')
+    //  => 当浏览器执行到这句代码的时候，会开启第二个线程。
+    //  => 主线程继续向下执行代码。
+    //  => 在服务器环境下打开页面。
+    //  -> web Worker  是浏览器提供的线程方法，会心开辟一个线程，进行处理 大量的业务逻辑代码。
+    var btn = document.querySelector('button');
+
+    const webWorker = new Worker('./test.js');
+
+    webWorker.onmessage = function(e){
+      console.log(e.data);
+      const data = e.data;
+      btn.onclick = function(){
+        console.log('你点提交按钮啦',data);
+      }
+      console.log('我执行完成啦')
+    }
+    
+    
+    setTimeout(()=>{
+      console.log('2秒钟后执行的settimeout');
+    },2000);
+  </script>
+</body>
+</html>

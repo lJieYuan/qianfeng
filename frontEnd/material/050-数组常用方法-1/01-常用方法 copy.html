@@ -1,0 +1,76 @@
+<!--
+ * @Author: lJieYuan 36994097+lJieYuan@users.noreply.github.com
+ * @Date: 2022-09-04 22:35:08
+ * @LastEditors: lJieYuan 36994097+lJieYuan@users.noreply.github.com
+ * @LastEditTime: 2022-09-05 11:49:14
+ * @FilePath: /qianfeng/frontEnd/material/050-数组常用方法-1/01-常用方法 copy.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!--
+ * @作者: kerwin
+ * @公众号: 大前端私房菜
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 影响数组的6个操作方法 shift unshift pop push splice sort 
+        const arr = [999,999999,99999,666,1,2,99];
+        console.log('我是原数组啊',arr);
+        // 数组末尾添加元素 push
+        // 返回值为，添加元素后的数组长度；
+        const resPush = arr.push('push');
+        console.log(arr,resPush,'push');
+
+        // 数组末尾删除元素 pop
+        // 返回值为：删除的元素值。
+        const resPop = arr.pop();
+        console.log(arr,resPop,'resPop');
+
+        // 数组开头添加元素 unshift
+        // 返回值为：添加原属后数组的长度。
+        const resUnshift = arr.unshift('unshift');
+        console.log(arr,resUnshift,'unshift');
+
+        // 数组开头删除元素 shift
+        // 返回值为：当前删除的元素值
+        const resShift = arr.shift();
+        console.log(arr,resShift,'shift');
+
+        // 数组增加删除元素，接受2个参数固定值为 数组下标， 为删除/替换几个元素
+        // 返回值为一个新的数组
+        const resSplice = arr.splice(1,1);
+        console.log(arr,resSplice,'删除数组下标为1的那个元素');
+
+        // 添加元素
+        const resSplice2 = arr.splice(1,0,{name:'yy',age:18},0);
+        console.log(arr,resSplice2,'根据下表给数组增加俩个元素');
+
+        // 数组排序
+        // 什么都不写诗， 如果都是数字，按照数字的第一个字符进行排序。
+        // 如果是字符或者英文按照阿uncodie 编码排序。
+        arr.sort(); 
+
+        // 从小到大排序
+        arr.sort(function(x,y){
+            return x - y;
+        });
+        console.log(arr,'sort');
+        console.log(arr.sort());
+        console.log(arr.sort(function(x,y){
+            return x - y;
+        }));
+
+
+        // 改变原数组的操作方法：
+        //  末尾： 删除元素 pop ，增加元素 push
+        //  开头   删除元素 shift，增加元素 unshift 
+        //  splice 灵活性增加或者删除元素的操作方法，当知道下标的时候非常好用，第一个参数、第二个参数分别为 ，删除/替换元素的下标开始，删除/替换元素的长度，后面的参数可以理解为 添加元素的时候需要。
+    </script>
+</body>
+</html>

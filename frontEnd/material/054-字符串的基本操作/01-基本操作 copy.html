@@ -1,0 +1,47 @@
+<!--
+ * @Author: lJieYuan 36994097+lJieYuan@users.noreply.github.com
+ * @Date: 2022-09-05 22:28:01
+ * @LastEditors: lJieYuan 36994097+lJieYuan@users.noreply.github.com
+ * @LastEditTime: 2022-09-05 22:39:01
+ * @FilePath: /qianfeng/frontEnd/material/054-字符串的基本操作/01-基本操作 copy.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!--
+ * @作者: kerwin
+ * @公众号: 大前端私房菜
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //    创建字符串的俩种方法
+    // 字面量。
+    var str = 'hellooooaaacccbadbbdab';
+    console.log(str);
+
+    // 构造函数
+    var str1 = new String('hello');
+    console.log(str1);
+    // 只读
+    str1[0] = 'd';
+    // 只读
+    console.log(str.length,str1.length,str1[2],str,str1);
+
+    const obj = {};
+    for(var i =0;i<str.length;i++){
+        const item = str[i];
+        if(obj[item]){
+            obj[item]++;
+        }else{
+            obj[item] = 1;
+        }
+    }
+    console.log(obj,'obj');
+    </script>
+</body>
+</html>

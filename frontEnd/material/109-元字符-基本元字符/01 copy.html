@@ -1,0 +1,46 @@
+<!--
+ * @Author: lJieYuan 36994097+lJieYuan@users.noreply.github.com
+ * @Date: 2022-09-09 14:55:23
+ * @LastEditors: lJieYuan 36994097+lJieYuan@users.noreply.github.com
+ * @LastEditTime: 2022-09-09 15:12:29
+ * @FilePath: /qianfeng/frontEnd/material/109-元字符-基本元字符/01 copy.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!--
+ * @作者: kerwin
+ * @公众号: 大前端私房菜
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 基本原字符 
+        // \d 数字， \D 非数字     
+        // \w 字母、数字、下划线， \W 非字母 、数字、下划线
+        // \s 空白、缩进、换行 ， \S 非空白、非缩进、非换行
+        // . 任意字符， \ 转义字符
+
+        var reg = /\d/;
+        // \d 只要字符串里只要有 1位数字 就是true
+        console.log(reg.test('adadadada2'));
+        // \D 只要字符串里有一个为数字 就是 false
+        console.log(/\D/.test('2222'));
+        // \w 匹配字母、数字、下划线。 只要满足一项就是 true
+        console.log(/\w/.test(';'));
+        // \W 匹配非字母、数字、下划线。 都不满足就是 true , 满足是false。
+        console.log(/\W/.test(';'));
+        // \s 匹配空格、换行、缩进 。 只要满足一项就是 true 
+        console.log(/\s/.test('\\'))
+        // \. 匹配任意字符
+        console.log(/./.test(';;;;.?'));
+        // \ 转义字符
+        console.log(/\./.test('a'));
+
+    </script>
+</body>
+</html>

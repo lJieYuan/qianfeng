@@ -1,0 +1,43 @@
+<!--
+ * @作者: kerwin
+ * @公众号: 大前端私房菜
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 0-10 不包含10
+
+        const mathRandom10 = Math.floor(Math.random()*10);
+        console.log(mathRandom10);
+        
+        // 0-10 包含10
+        const mathRandom11 = Math.floor(Math.random()*10)+1;
+        console.log(mathRandom11);
+        // 10-20 不包含20
+        const mathRandom20 = Math.floor(Math.random()*10)+10;
+        console.log(mathRandom20);
+        // 10-20 包含20
+        const mathRandom21 = Math.floor(Math.random()*10)+10+1;
+        console.log(mathRandom21);
+       
+        console.log(getRd(100,200));
+        console.log(getRd1(100,200));
+
+        //函数 --min-max 不包含
+        function getRd(min=0,max=10){
+            return Math.floor(Math.random()*(max-min))+min;
+        }
+
+         //函数 --min-max 包含
+         function getRd1(min=0,max=10){
+            return Math.floor(Math.random()*(max-min+1))+min;
+        }
+    </script>
+</body>
+</html>

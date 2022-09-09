@@ -1,0 +1,43 @@
+<!--
+ * @Author: lJieYuan 36994097+lJieYuan@users.noreply.github.com
+ * @Date: 2022-09-04 21:27:36
+ * @LastEditors: lJieYuan 36994097+lJieYuan@users.noreply.github.com
+ * @LastEditTime: 2022-09-04 21:43:18
+ * @FilePath: /qianfeng/frontEnd/material/049-选择排序法/01-选择 copy.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!--
+ * @作者: kerwin
+ * @公众号: 大前端私房菜
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 选择排序法，先假设数组的第0项为最小值，与其它数值进行排序，将最小值排到左边。大值排到右边。
+        const arr = [44, 3, 2, 1, 5, 8, 111]
+        for(let m = 0;m < arr.length - 1; m++){
+            let mIndex = m;
+            for(let i = m+1;i < arr.length; i++){
+                if(arr[i] < arr[mIndex]){
+                    mIndex = i;
+                }
+            }
+            if(mIndex !== m){
+                const temp = arr[m];
+                arr[m] = arr[mIndex];
+                arr[mIndex] = temp;
+            }
+        }
+        console.log(arr);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+<!--
+ * @Author: lJieYuan 36994097+lJieYuan@users.noreply.github.com
+ * @Date: 2022-09-05 23:11:13
+ * @LastEditors: lJieYuan 36994097+lJieYuan@users.noreply.github.com
+ * @LastEditTime: 2022-09-06 10:21:37
+ * @FilePath: /qianfeng/frontEnd/material/056-字符串常用方法/01-方法 copy.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!--
+ * @作者: kerwin
+ * @公众号: 大前端私房菜
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // array.join('-') 将数组以 - 拼接为字符串。
+        // ascll 编码 unicode编码
+        // 字符串的17种方法：
+        // str.charAt 根据下标查找出对应的字符。
+        // str.charCodeAt 获取字符对应的unicode编码。
+        // String.fromCharCode 将unicode 编码转变为字符
+        // str.substr(下标，长度) 截取字符串
+        // str.substring(开始下标，结束下标)，包头不包尾部，下标不能为负数值。
+        // str.slice(开始下标，结束下标)，包头不包尾部，下标可以为负数值。
+        // str.split(',') 将字符串以什么内容进行分割为数组。
+        // str.trim() 去除字符串左右空格。
+        // str.trimLeft() str.trimStart() 去除字符串左边空格。
+        // str.trimRight() str.trimEnd() 去除字符串右边空格。
+        // str.indexOf() 查找字符串首次出现的元素，返回下标,从左到右查找。
+        // str.lastIndexOf() 查找字符串首次出现的元素，返回下标，从右向左查找。
+        // str.toUpperCase() 将字符串转变为大写。
+        // str.toLowerCase() 将字符串转变为小写。
+        // str.toLocalUpperCase() 将字符串转变为本地计算机语言的大写。
+        // str.toLocalLowerCase() 将字符串转变为本地计算机语言的小写。
+        // str.replace('o','') 替换字符串首次出现的内容。
+    
+
+
+        // => str.charAt 根据下标查找字符
+        // => str.charCodeAt 获取字符对应的unicode编码
+
+        const str = 'abcdefz';
+        const charAt = str.charAt(5);
+        console.log(charAt,'charAt');
+        console.log('=================');
+
+        // 获取对应的unicode 编码。
+        const charCodeAt = str.charCodeAt(0);
+        console.log(charCodeAt,'charCodeAt');
+        console.log('=================');
+        
+        const ziMAry = [];
+        for(let i = 97;i <= 122;i++){
+            // 将unicode 编码转换为字符 String.fromCharCode 构造函数String
+            const code = String.fromCharCode(i);
+            ziMAry.push(code);
+        }
+        console.log(ziMAry,'code');
+        console.log('=================');
+
+        const str2 = 'helloN';
+        // str.substr(开始索引,长度) 
+        // str.substring(开始索引,结束索引) 包头不包尾 结束索引不支持负数
+        // str.slice(开始索引，结束索引)包头不包尾 开始、结束索引支持负数
+        // str.split 数组截取
+        const subStr = str2.substr(0,2);
+        console.log(subStr,str,'subStr');
+        console.log('=================');
+
+        const substring = str2.substring(0,2);
+        console.log(substring,str,'substring');
+        console.log('=================');
+
+        const slice = str2.slice(1,6);
+        console.log(slice,str,'slice');
+        console.log('=================');
+
+        const str3 = 'a|b|c|d|e|f';
+        const split = str3.split('|');
+        console.log(split,str3,'split');
+        console.log('=================');
+
+        // trim 去掉首尾空格。
+        // trimStart / trimLeft 去掉首位空格。
+        // trimEnd / trimRight 去掉尾部空格。
+        
+        const str4 = ' wdwada ';
+        const trim = str4.trim();
+        console.log(trim,str4,'trim',str4.trimStart(),str4.trimLeft(),str4.trimEnd(),str4.trimRight());
+        console.log('=================');
+
+        // 将字符串转变为大小写。
+        const str5 = 'adaolopdadao';
+        const toUpperCase = str5.toUpperCase(); //大写
+        console.log(toUpperCase,str5,'toUpperCase');
+        console.log('=================');
+
+        const toLowerCase = str5.toLowerCase(); //小写
+        console.log(toLowerCase,str5,'toLowerCase');
+        console.log('=================');
+
+        const toLocaleUpperCase = str5.toLocaleUpperCase(); //根据本地语言转变为大写
+        console.log(toLocaleUpperCase,str5,'toLocaleUpperCase');
+        console.log('=================');
+
+        const toLocaleLowerCase = str5.toLocaleLowerCase(); //根据本地语言转变为小写
+        console.log(toLocaleLowerCase,str5,'toLocaleLowerCase');
+        console.log('=================');
+
+        const indexOf = str5.indexOf('d'); //查找字符串中首次出现的元素返回下标,从左往右
+        console.log(indexOf,str5,'indexOf');
+        console.log('=================');
+
+        const lastIndexOf = str5.lastIndexOf('d'); //查找字符串中首次出现的元素返回下标，从右往左
+        console.log(lastIndexOf,str5,'lastIndexOf');
+        console.log('=================');
+
+        const replace = str5.replace('o','|'); //查找字符串中首次出现的元素替换为｜
+        console.log(replace,str5,'replace');
+        console.log('=================');
+    </script>
+</body>
+</html>

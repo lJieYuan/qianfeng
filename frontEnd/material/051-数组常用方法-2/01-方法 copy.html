@@ -1,0 +1,105 @@
+<!--
+ * @Author: lJieYuan 36994097+lJieYuan@users.noreply.github.com
+ * @Date: 2022-09-05 11:42:29
+ * @LastEditors: lJieYuan 36994097+lJieYuan@users.noreply.github.com
+ * @LastEditTime: 2022-09-05 15:51:53
+ * @FilePath: /qianfeng/frontEnd/material/051-数组常用方法-2/01-方法 copy.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 不影响原数组的五个操作方法。 concat 数组合并；join 数组转换为字符串，对象数据类型不行， slice 数组截取， indexOf 数组关键内容查找，lastIndexOf 数组从后向前找
+        const obj = 'db2';
+        const arr = [1,2,{name:'y'},[1,2],[1],[1,2,[9999,99.99]],9999,2,true,false,null,undefined,9999,NaN,Number(1+obj),parseInt(obj+2),parseInt('2'+obj),'NaN'];
+        const arr1 = [3,4];
+
+        // concat
+        const arr2 = arr.concat(arr1);
+        console.log(arr2,'concat:arr拼接上arr1 = arr2','---- 核心会返回一个新的数组',arr);
+
+        const arr3 = arr.concat();
+        console.log(arr3,'concat:arr拼接上空气 = arr3','---- 核心会返回一个新的数组，就算不传递合并的数组',arr);
+        
+        const arr4 = arr.concat(arr1,arr,[1,2],9,[[1,2],[2,2,{name:1,age:22}]],{key:999999});
+        console.log(arr4,'concat:arr拼接上很多元素数组、单数、对象 = arr4','---- 核心会返回一个新的数组,数组和单数都会合并到新的数组里',arr);
+
+        // join 方法可以将数组进行拼接为字符串,数组里只支持简单数据类型，对象不行,多维数组也可以解析为一层数组最后变为字符串。
+        const join1 = arr.join();
+        document.write(join1,'-join','<li>999999</li>');
+
+        let $li = '';
+        for(let i = 0;i<9;i++){
+            $li+='<li> '+(i+1)+'------'+arr.join('-')+' </li>'
+        }
+
+        document.write($li);
+
+        // slice 方法截取数组，返回一个新的数组，不改变原数组, 俩个固定参数， 以下标开始， 包头不包括尾部。 第二个参数可以传递参数为负数， -1 代表最后一位数 -2代表数组的倒数第二项，负数也同理，包头不包尾。
+        // 注意，没有除了这俩个固定参数，它跟splice 的不同点，splice 可以接着插入多个数组， slice 不行 。
+        const sliceRes = arr.slice(1,3);
+        console.log('我是原数组arr-',arr,'slice--',sliceRes);
+        
+        const sliceRes2 = arr.slice(1,-1);
+        console.log('我是原数组arr-',arr,'slice2--',sliceRes2);
+
+        const sliceRes3 = arr.slice(1,-1,[1],99,[1,2],99,'插入',[['多维度数据插入','1'],['多维度数据插入','2']]);
+        console.log('我是原数组arr-',arr,'slice3--',sliceRes3);
+
+        const sliceRes4 = arr.slice();
+        console.log('我是原数组arr-',arr,'slice4，我没有接受到任何参数，但是我可以返回一个新的引用地址，不会影响原来数组，相当于复植操作，但后面操作不会改变原有数组--',sliceRes4);
+
+
+        // indexOf 检测一个数据值是否存在于这个数组中，找不到返回-1。找到返回值为，当前数据在数组中的下标。从开头查找。 注意检测不了是否为NaN值。
+        const indexOfRes = arr.indexOf(2);
+        console.log(indexOfRes,'indexOf 我用于从数组开头检测数组中是否存在这个值，并且返回当前数据在数组中的下标');
+
+        const indexOfRes2 = arr.indexOf(2,2);
+        console.log(indexOfRes2,'indexOf 我想查找2这个数据，并且从下标2 ，开始查找。 你看看我还存在与第几项');
+
+
+        // 我想用indexOf 检测一个对象试试 ，能不能检测到，看看它有没有什么局限。
+        const indexOfRes3 = arr.indexOf({name:'y'});
+        console.log(indexOfRes3,'indexOf 检测一个对象试试 ，能不能检测到，看看它有没有什么局限'); // 经过证实，检测不了复杂数据类型 对象
+
+        // 我想用indexOf 检测一个数组试试 ，能不能检测到，看看它有没有什么局限。
+        const indexOfRes4 = arr.indexOf([1,2]);
+        console.log(indexOfRes4,'indexOf 检测一个数组试试 ，能不能检测到，看看它有没有什么局限'); // 经过证实，检测不了复杂数据类型 数组
+
+        // 我想用indexOf 检测一个数组试试 ，能不能检测到，看看它有没有什么局限。
+        const indexOfRes5 = arr.indexOf([1]);
+        console.log(indexOfRes5,'indexOf 检测一个数组试试 ，能不能检测到，看看它有没有什么局限'); // 经过证实，检测不了复杂数据类型 数组
+
+        // 我想用indexOf 检测一个布尔值试试。
+        const indexOfRes6 = arr.indexOf(true);
+        console.log(indexOfRes6,'indexOf 检测一个布尔值试试，能不能检测到，看看它有没有什么局限'); // 经过证实，可以检测
+
+        const indexOfRes7 = arr.indexOf(false);
+        console.log(indexOfRes7,'indexOf 检测一个布尔值试试，能不能检测到，看看它有没有什么局限'); // 经过证实，可以检测
+
+        const indexOfRes8 = arr.indexOf(null);
+        console.log(indexOfRes8,'indexOf 检测一个null试试，能不能检测到，看看它有没有什么局限'); // 经过证实，可以检测
+
+        const indexOfRes9 = arr.indexOf(undefined);
+        console.log(indexOfRes9,'indexOf 检测一个undefined试试，能不能检测到，看看它有没有什么局限'); // 经过证实，可以检测
+
+        const indexOfRes10 = arr.indexOf(NaN);
+        console.log(indexOfRes10,'indexOf 检测一个NaN试试，能不能检测到，看看它有没有什么局限'); // 经过证实，无法检测NaN
+
+        const indexOfRes11 = arr.indexOf(NaN,10);
+        console.log(indexOfRes11,'indexOf 检测一个NaN试试，能不能检测到，看看它有没有什么局限'); // 经过证实，可以检测NaN
+        // 总结indexOf lastIndexOf 只能处理检测普通数据类型，无法检测引用数据类型。
+
+        // lastIndexOf 从后向前查找，特性与indexOf一样，只是查找顺序变化不一样。
+        const lastIndexOf = arr.lastIndexOf(9999,12);
+        console.log('我是数组arr',arr,'------',lastIndexOf,'lastIndexOf 检测数据，从后向前查找'); 
+    </script>
+</body>
+</html>

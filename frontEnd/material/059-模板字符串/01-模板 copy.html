@@ -1,0 +1,33 @@
+<!--
+ * @Author: lJieYuan 36994097+lJieYuan@users.noreply.github.com
+ * @Date: 2022-09-06 10:50:05
+ * @LastEditors: lJieYuan 36994097+lJieYuan@users.noreply.github.com
+ * @LastEditTime: 2022-09-06 10:52:32
+ * @FilePath: /qianfeng/frontEnd/material/059-模板字符串/01-模板 copy.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!--
+ * @作者: kerwin
+ * @公众号: 大前端私房菜
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //es6 - ``
+
+        const arr = ['zhongguo','meiguo','aodaliya','riben','jianada','eluosi'];
+
+        const domArr = arr.map((item)=>{
+            const li = `<li>${item}</li>`
+            return li;
+        });
+        document.write(domArr.join(''));
+    </script>
+</body>
+</html>
